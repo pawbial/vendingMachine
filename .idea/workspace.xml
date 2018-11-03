@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc8ed372-766d-44bb-921a-61e6262ef881" name="Default Changelist" comment="" />
+    <list default="true" id="bc8ed372-766d-44bb-921a-61e6262ef881" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/controller/CustomerOperationsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Tray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/VendingMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/util/Configuration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/sdacademy/vending/model/VendingMachineTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/sdacademy/vending/util/ConfigurationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/rescources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pl/sdacademy/vending/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pl/sdacademy/vending/controller/CustomerOperationsController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pl/sdacademy/vending/model/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pl/sdacademy/vending/model/Tray$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pl/sdacademy/vending/model/Tray$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pl/sdacademy/vending/model/Tray.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pl/sdacademy/vending/model/VendingMachine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pl/sdacademy/vending/util/Configuration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pl/sdacademy/vending/model/VendingMachineTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/pl/sdacademy/vending/util/ConfigurationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +80,7 @@
     <session id="-619891582">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.opened" value="2" />
@@ -196,7 +226,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="190" />
     <option name="y" value="10" />
     <option name="width" value="1750" />
@@ -365,6 +395,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Java szkolenie/ZarzyckiPractice" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -526,8 +557,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2579425" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
