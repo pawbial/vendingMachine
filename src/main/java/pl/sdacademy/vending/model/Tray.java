@@ -7,7 +7,7 @@ public class Tray {
 
     private String symbol;
     private Long price;
-    private Queue <Product> products;
+    private Queue<Product> products;
 
 
     public Long getPrice() {
@@ -19,29 +19,30 @@ public class Tray {
         return symbol;
     }
 
-private Tray (Builder builder) {
+    private Tray(Builder builder) {
         symbol = builder.symbol;
         price = builder.price;
         products = builder.products;
-}
+    }
 
-public static Builder builder (String symbol) {
+    public static Builder builder(String symbol) {
 
         return new Builder(symbol);
-}
+    }
 
     public static class Builder {
         private String symbol;
         private Long price;
-        private Queue <Product> products;
+        private Queue<Product> products;
 
 
-        private Builder (String symbol) {
+        private Builder(String symbol) {
 
             this.symbol = symbol;
+            this.products = new ArrayDeque<>();
         }
 
-        public Tray build () {
+        public Tray build() {
             if (price == null || price < 0) {
                 price = 0L;
             }
@@ -49,7 +50,7 @@ public static Builder builder (String symbol) {
 
         }
 
-        public Builder product (Product product) {
+        public Builder product(Product product) {
             products.add(product);
             return this;
         }
@@ -60,7 +61,7 @@ public static Builder builder (String symbol) {
             return this;
         }
 
-        public Builder price (Long price) {
+        public Builder price(Long price) {
             this.price = price;
             return this;
         }

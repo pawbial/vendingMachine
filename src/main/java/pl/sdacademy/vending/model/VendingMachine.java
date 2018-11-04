@@ -52,46 +52,45 @@ public class VendingMachine {
                     .product(new Product("Product" + symbol))
                     .product(new Product("Product" + symbol))
                     .build();
-        } else if ( productProbability < 5) {
+            trays[rowNumber][colNumber] = tray;
+        } else if (productProbability < 5) {
             Tray tray = Tray
                     .builder(symbol)
                     .price(price)
                     .product(new Product("Product" + symbol))
                     .build();
+            trays[rowNumber][colNumber] = tray;
 
         } else {
             Tray tray = Tray
                     .builder(symbol)
                     .price(price)
                     .build();
-
+            trays[rowNumber][colNumber] = tray;
+// prob. 01 -> 2x product prob. 01 -> 2x product
         }
-        Tray tray = Tray
-                .builder(symbol)                // prob. 01 -> 2x product
-                .price(price)                   // prob. 0.5 -< 1x product
-                .build();
-        trays[rowNumber][colNumber] = tray;
+
     }
 
 
-    public Optional<Tray> getTrayAtPosition ( int rowNum, int colNum){
+    public Optional<Tray> getTrayAtPosition(int rowNum, int colNum) {
 
-            try {
-                Tray tray = trays[rowNum][colNum];
-                Optional<Tray> wrpappedTray = Optional.ofNullable(tray);
-                return wrpappedTray;
-            } catch (ArrayIndexOutOfBoundsException e) {
-                return Optional.empty();
-            }
-
+        try {
+            Tray tray = trays[rowNum][colNum];
+            Optional<Tray> wrpappedTray = Optional.ofNullable(tray);
+            return wrpappedTray;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            return Optional.empty();
         }
 
-        public long rowsCount () {
-            return rowsCount;
-        }
-
-        public long colsCount () {
-            return colsCount;
-        }
     }
+
+    public long rowsCount() {
+        return rowsCount;
+    }
+
+    public long colsCount() {
+        return colsCount;
+    }
+}
 
