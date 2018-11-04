@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc8ed372-766d-44bb-921a-61e6262ef881" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/util/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/util/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/sdacademy/vending/util/StringUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/sdacademy/vending/util/StringUtilTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,12 +99,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="883" />
+          <entry key="java" value="885" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="883" />
+          <entry key="JAVA" value="885" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -120,71 +121,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Tray.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Product.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-              <folding>
-                <element signature="e#115#116#0" expanded="true" />
-                <element signature="e#142#143#0" expanded="true" />
-                <element signature="e#177#178#0" expanded="true" />
-                <element signature="e#209#210#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/VendingMachine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/util/StringUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="153">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pl/sdacademy/vending/util/StringUtilTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="527">
+              <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -229,6 +179,8 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Tray.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Product.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/VendingMachine.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pl/sdacademy/vending/util/StringUtilTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/util/StringUtil.java" />
       </list>
     </option>
   </component>
@@ -408,7 +360,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541324970794" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541325441241" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
@@ -436,7 +388,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.StringUtilTest.shouldTrimTooLongText">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.sdacademy.vending.Main" />
       <module name="vendingMachine" />
@@ -446,6 +398,38 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringUtilTest.shouldReturnUnmodifiedTextIfLengthMatched" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vendingMachine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.sdacademy.vending.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.sdacademy.vending.util" />
+      <option name="MAIN_CLASS_NAME" value="pl.sdacademy.vending.util.StringUtilTest" />
+      <option name="METHOD_NAME" value="shouldReturnUnmodifiedTextIfLengthMatched" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringUtilTest.shouldTrimTooLongText" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vendingMachine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.sdacademy.vending.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.sdacademy.vending.util" />
+      <option name="MAIN_CLASS_NAME" value="pl.sdacademy.vending.util.StringUtilTest" />
+      <option name="METHOD_NAME" value="shouldTrimTooLongText" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -480,52 +464,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VendingMachineTest.shouldThrowExceptionWhenRowsMoreThan26" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="vendingMachine" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pl.sdacademy.vending.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pl.sdacademy.vending.model" />
-      <option name="MAIN_CLASS_NAME" value="pl.sdacademy.vending.model.VendingMachineTest" />
-      <option name="METHOD_NAME" value="shouldThrowExceptionWhenRowsMoreThan26" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VendingMachineTest.shouldThrowExceptionWhenZeroColumnsConfigured" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="vendingMachine" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pl.sdacademy.vending.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pl.sdacademy.vending.model" />
-      <option name="MAIN_CLASS_NAME" value="pl.sdacademy.vending.model.VendingMachineTest" />
-      <option name="METHOD_NAME" value="shouldThrowExceptionWhenZeroColumnsConfigured" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JUnit.VendingMachineTest.shouldThrowExceptionWhenZeroColumnsConfigured" />
-      <item itemvalue="JUnit.VendingMachineTest.shouldThrowExceptionWhenRowsMoreThan26" />
       <item itemvalue="JUnit.VendingMachineTest.shouldThrowExceptionWhenColumnsMoreThan9" />
       <item itemvalue="JUnit.VendingMachineTest" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.StringUtilTest.shouldReturnUnmodifiedTextIfLengthMatched" />
+      <item itemvalue="JUnit.StringUtilTest.shouldTrimTooLongText" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StringUtilTest.shouldTrimTooLongText" />
+        <item itemvalue="JUnit.StringUtilTest.shouldReturnUnmodifiedTextIfLengthMatched" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.VendingMachineTest" />
         <item itemvalue="JUnit.VendingMachineTest.shouldThrowExceptionWhenColumnsMoreThan9" />
-        <item itemvalue="JUnit.VendingMachineTest.shouldThrowExceptionWhenRowsMoreThan26" />
-        <item itemvalue="JUnit.VendingMachineTest.shouldThrowExceptionWhenZeroColumnsConfigured" />
       </list>
     </recent_temporary>
   </component>
@@ -543,12 +495,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VendingMachineTest_shouldThrowExceptionWhenZeroRowsConfigured - 2018.11.03 at 14h 20m 31s.xml">
-      <configuration name="VendingMachineTest.shouldThrowExceptionWhenZeroRowsConfigured" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VendingMachineTest_shouldThrowExceptionWhenZeroColumnsConfigured - 2018.11.03 at 14h 20m 44s.xml">
-      <configuration name="VendingMachineTest.shouldThrowExceptionWhenZeroColumnsConfigured" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="VendingMachineTest_shouldThrowExceptionWhenZeroColumnsConfigured - 2018.11.03 at 14h 22m 51s.xml">
       <configuration name="VendingMachineTest.shouldThrowExceptionWhenZeroColumnsConfigured" configurationId="JUnit" />
     </history-entry>
@@ -573,11 +519,18 @@
     <history-entry file="VendingMachineTest - 2018.11.03 at 14h 29m 58s.xml">
       <configuration name="VendingMachineTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="StringUtilTest_shouldReturnUnmodifiedTextIfLengthMatched - 2018.11.04 at 10h 56m 06s.xml">
+      <configuration name="StringUtilTest.shouldReturnUnmodifiedTextIfLengthMatched" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringUtilTest_shouldTrimTooLongText - 2018.11.04 at 10h 56m 20s.xml">
+      <configuration name="StringUtilTest.shouldTrimTooLongText" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26928896" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26928896" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -586,15 +539,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4969743" visible="true" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49621785" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5030257" side_tool="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50378215" side_tool="true" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3289689" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4977307" weight="0.3289689" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4969743" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -683,39 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Tray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-          <folding>
-            <element signature="e#115#116#0" expanded="true" />
-            <element signature="e#142#143#0" expanded="true" />
-            <element signature="e#177#178#0" expanded="true" />
-            <element signature="e#209#210#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/controller/CustomerOperationsController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -736,17 +656,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/util/StringUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="175">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding>
+            <element signature="e#115#116#0" expanded="true" />
+            <element signature="e#142#143#0" expanded="true" />
+            <element signature="e#177#178#0" expanded="true" />
+            <element signature="e#209#210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Tray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pl/sdacademy/vending/util/StringUtilTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="527">
+          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/util/StringUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
