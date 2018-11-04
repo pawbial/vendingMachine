@@ -41,7 +41,7 @@ public class StringUtilTest {
         // when
         String adjustedText = StringUtil.adjustText(textToAdjust, expectedLength);
         // then
-        assertEquals("  AB  ", adjustedText);
+        assertEquals("   AB   ", adjustedText);
     }
 
     @Test
@@ -52,7 +52,7 @@ public class StringUtilTest {
         // when
         String adjustedText = StringUtil.adjustText(textToAdjust, expectedLength);
         // then
-        assertEquals("  ABC ", adjustedText);
+        assertEquals("   ABC  ", adjustedText);
     }
 
     @Test

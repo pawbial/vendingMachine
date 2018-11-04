@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc8ed372-766d-44bb-921a-61e6262ef881" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/util/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/util/StringUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pl/sdacademy/vending/util/StringUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/sdacademy/vending/util/StringUtilTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -99,26 +100,26 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="28" />
-          <entry key="java" value="1579" />
+          <entry key="java" value="2306" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1579" />
+          <entry key="JAVA" value="2306" />
           <entry key="PLAIN_TEXT" value="28" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="6" />
+          <entry key="java" value="7" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="6" />
+          <entry key="JAVA" value="7" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -127,23 +128,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/util/StringUtil.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pl/sdacademy/vending/util/StringUtilTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-              <folding>
-                <element signature="e#353#354#0" expanded="true" />
-                <element signature="e#379#380#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="124">
+              <caret line="80" column="49" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/pl/sdacademy/vending/util/StringUtilTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/util/StringUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="80" column="78" selection-start-line="80" selection-start-column="78" selection-end-line="80" selection-end-column="78" />
+            <state relative-caret-position="175">
+              <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -184,9 +181,9 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Tray.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Product.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/VendingMachine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/util/StringUtil.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/pl/sdacademy/vending/util/StringUtilTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/util/StringUtil.java" />
       </list>
     </option>
   </component>
@@ -366,7 +363,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541327847582" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541333570400" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
@@ -394,13 +391,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StringUtilTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pl.sdacademy.vending.Main" />
+  <component name="RunManager" selected="Application.StringUtil">
+    <configuration name="StringUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pl.sdacademy.vending.util.StringUtil" />
       <module name="vendingMachine" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pl.sdacademy.vending.*" />
+          <option name="PATTERN" value="pl.sdacademy.vending.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -408,7 +405,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringUtilTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StringUtilTest.parametersForShouldProperlyFormatMoney" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vendingMachine" />
       <extension name="coverage">
         <pattern>
@@ -418,27 +415,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="pl.sdacademy.vending.util" />
       <option name="MAIN_CLASS_NAME" value="pl.sdacademy.vending.util.StringUtilTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StringUtilTest.shouldCenterToShortText" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="vendingMachine" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pl.sdacademy.vending.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pl.sdacademy.vending.util" />
-      <option name="MAIN_CLASS_NAME" value="pl.sdacademy.vending.util.StringUtilTest" />
-      <option name="METHOD_NAME" value="shouldCenterToShortText" />
+      <option name="METHOD_NAME" value="parametersForShouldProperlyFormatMoney" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringUtilTest.shouldReturnUnmodifiedTextIfLengthMatched" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StringUtilTest.shouldCenterEvenText" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vendingMachine" />
       <extension name="coverage">
         <pattern>
@@ -448,13 +431,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="pl.sdacademy.vending.util" />
       <option name="MAIN_CLASS_NAME" value="pl.sdacademy.vending.util.StringUtilTest" />
-      <option name="METHOD_NAME" value="shouldReturnUnmodifiedTextIfLengthMatched" />
+      <option name="METHOD_NAME" value="shouldCenterEvenText" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringUtilTest.shouldTrimTooLongText" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StringUtilTest.shouldCenterOddText" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vendingMachine" />
       <extension name="coverage">
         <pattern>
@@ -464,26 +447,42 @@
       </extension>
       <option name="PACKAGE_NAME" value="pl.sdacademy.vending.util" />
       <option name="MAIN_CLASS_NAME" value="pl.sdacademy.vending.util.StringUtilTest" />
-      <option name="METHOD_NAME" value="shouldTrimTooLongText" />
+      <option name="METHOD_NAME" value="shouldCenterOddText" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringUtilTest.shouldProperlyFormatMoney" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vendingMachine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.sdacademy.vending.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.sdacademy.vending.util" />
+      <option name="MAIN_CLASS_NAME" value="pl.sdacademy.vending.util.StringUtilTest" />
+      <option name="METHOD_NAME" value="shouldProperlyFormatMoney" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.StringUtilTest.shouldReturnUnmodifiedTextIfLengthMatched" />
-      <item itemvalue="JUnit.StringUtilTest.shouldTrimTooLongText" />
-      <item itemvalue="JUnit.StringUtilTest.shouldCenterToShortText" />
-      <item itemvalue="JUnit.StringUtilTest" />
+      <item itemvalue="JUnit.StringUtilTest.parametersForShouldProperlyFormatMoney" />
+      <item itemvalue="JUnit.StringUtilTest.shouldProperlyFormatMoney" />
+      <item itemvalue="JUnit.StringUtilTest.shouldCenterEvenText" />
+      <item itemvalue="JUnit.StringUtilTest.shouldCenterOddText" />
+      <item itemvalue="Application.StringUtil" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.StringUtilTest" />
-        <item itemvalue="JUnit.StringUtilTest.shouldTrimTooLongText" />
-        <item itemvalue="JUnit.StringUtilTest.shouldCenterToShortText" />
-        <item itemvalue="JUnit.StringUtilTest.shouldReturnUnmodifiedTextIfLengthMatched" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.StringUtil" />
+        <item itemvalue="JUnit.StringUtilTest.shouldCenterOddText" />
+        <item itemvalue="JUnit.StringUtilTest.shouldProperlyFormatMoney" />
+        <item itemvalue="JUnit.StringUtilTest.parametersForShouldProperlyFormatMoney" />
+        <item itemvalue="JUnit.StringUtilTest.shouldCenterEvenText" />
       </list>
     </recent_temporary>
   </component>
@@ -501,42 +500,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VendingMachineTest - 2018.11.03 at 14h 29m 58s.xml">
-      <configuration name="VendingMachineTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StringUtilTest_shouldReturnUnmodifiedTextIfLengthMatched - 2018.11.04 at 10h 56m 06s.xml">
-      <configuration name="StringUtilTest.shouldReturnUnmodifiedTextIfLengthMatched" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StringUtilTest_shouldTrimTooLongText - 2018.11.04 at 10h 56m 20s.xml">
-      <configuration name="StringUtilTest.shouldTrimTooLongText" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StringUtilTest_shouldTrimTooLongText - 2018.11.04 at 11h 12m 16s.xml">
-      <configuration name="StringUtilTest.shouldTrimTooLongText" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StringUtilTest_shouldCenterToShortText - 2018.11.04 at 11h 18m 19s.xml">
-      <configuration name="StringUtilTest.shouldCenterToShortText" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StringUtilTest_shouldCenterToShortText - 2018.11.04 at 11h 19m 41s.xml">
-      <configuration name="StringUtilTest.shouldCenterToShortText" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StringUtilTest_shouldTrimTooLongText - 2018.11.04 at 11h 19m 56s.xml">
-      <configuration name="StringUtilTest.shouldTrimTooLongText" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StringUtilTest - 2018.11.04 at 11h 30m 39s.xml">
-      <configuration name="StringUtilTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StringUtilTest - 2018.11.04 at 11h 33m 16s.xml">
-      <configuration name="StringUtilTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="StringUtilTest - 2018.11.04 at 11h 34m 16s.xml">
       <configuration name="StringUtilTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringUtilTest_parametersForShouldProperlyFormatMoney - 2018.11.04 at 11h 49m 54s.xml">
+      <configuration name="StringUtilTest.parametersForShouldProperlyFormatMoney" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringUtilTest_shouldProperlyFormatMoney - 2018.11.04 at 11h 49m 59s.xml">
+      <configuration name="StringUtilTest.shouldProperlyFormatMoney" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringUtilTest_shouldCenterEvenText - 2018.11.04 at 11h 51m 45s.xml">
+      <configuration name="StringUtilTest.shouldCenterEvenText" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringUtilTest_shouldCenterEvenText - 2018.11.04 at 11h 52m 10s.xml">
+      <configuration name="StringUtilTest.shouldCenterEvenText" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringUtilTest_shouldCenterOddText - 2018.11.04 at 11h 52m 16s.xml">
+      <configuration name="StringUtilTest.shouldCenterOddText" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringUtilTest_parametersForShouldProperlyFormatMoney - 2018.11.04 at 11h 52m 58s.xml">
+      <configuration name="StringUtilTest.parametersForShouldProperlyFormatMoney" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringUtilTest_shouldProperlyFormatMoney - 2018.11.04 at 11h 53m 02s.xml">
+      <configuration name="StringUtilTest.shouldProperlyFormatMoney" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringUtilTest_shouldCenterOddText - 2018.11.04 at 11h 53m 48s.xml">
+      <configuration name="StringUtilTest.shouldCenterOddText" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringUtilTest_shouldCenterOddText - 2018.11.04 at 11h 54m 10s.xml">
+      <configuration name="StringUtilTest.shouldCenterOddText" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26928896" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26928896" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -545,7 +544,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49621785" visible="true" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49621785" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -695,21 +694,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/util/StringUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/sdacademy/vending/util/StringUtilTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="124">
+          <caret line="80" column="49" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/sdacademy/vending/util/StringUtilTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/util/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="80" column="78" selection-start-line="80" selection-start-column="78" selection-end-line="80" selection-end-column="78" />
+        <state relative-caret-position="175">
+          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
         </state>
       </provider>
     </entry>
