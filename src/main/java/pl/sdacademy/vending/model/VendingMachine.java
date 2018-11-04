@@ -53,8 +53,17 @@ public class VendingMachine {
                     .product(new Product("Product" + symbol))
                     .build();
         } else if ( productProbability < 5) {
+            Tray tray = Tray
+                    .builder(symbol)
+                    .price(price)
+                    .product(new Product("Product" + symbol))
+                    .build();
 
         } else {
+            Tray tray = Tray
+                    .builder(symbol)
+                    .price(price)
+                    .build();
 
         }
         Tray tray = Tray
