@@ -39,6 +39,10 @@ public class Tray {
 
     }
 
+    public Optional<Product> buyProduct() {
+        return Optional.ofNullable(products.poll());
+    }
+
     public static class Builder {
         private String symbol;
         private Long price;
