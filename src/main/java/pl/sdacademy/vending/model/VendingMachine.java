@@ -1,9 +1,11 @@
 package pl.sdacademy.vending.model;
 
 import pl.sdacademy.vending.util.Configuration;
+import pl.sdacademy.vending.util.StringUtil;
 
 import java.util.Optional;
 import java.util.Random;
+import java.util.Scanner;
 
 public class VendingMachine {
 
@@ -103,6 +105,48 @@ public class VendingMachine {
             return Optional.empty();
         }
     }
+
+    public Optional<Product> buyProductWithSymbol(String traySymbol) {
+
+
+        for (int i = 0; i < trays.length; i++) {
+            for (int j = 0; j < trays[i].length; j++) {
+                if (trays[i][j] != null) {
+                    if (traySymbol.equals(trays[i][j].getSymbol())) {
+                        Tray tray = trays[i][j];
+                        return tray.buyProduct();
+                    }
+                }
+            }
+
+        }
+        return Optional.empty();
+    }
+
+    public Optional <Product> buyProductWithSymbol2 (String traySymbol) {
+        if (traySymbol.length() != 2) {
+            return Optional.empty();
+        }
+        char symbolLetter = traySymbol.toUpperCase().charAt(0);
+        char symbolNumber = traySymbol.charAt(1);
+
+        int rowNo = symbolLetter - 'A';
+        int colNo = symbolNumber - '1';
+
+        if (rowNo < 0 || rowNo >= rowsCount || colNo <0 || colNo >= colsCount) {
+            return Optional.empty();
+        }
+        Tray tray = trays[rowNo][colNo];
+
+        if (tray == null) {
+            return Optional.empty();
+        } else {
+            return tray.buyProduct();
+        }
+    }
+
+
 }
+
 
 
