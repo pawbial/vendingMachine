@@ -3,6 +3,7 @@ package pl.sdacademy.vending.model;
 import pl.sdacademy.vending.util.Configuration;
 
 import java.util.Optional;
+import java.util.Random;
 
 public class VendingMachine {
 
@@ -26,37 +27,62 @@ public class VendingMachine {
         }
         trays = new Tray[(int) rowsCount][(int) colsCount];
 
-
+        Random random = new Random();
         for (int rowNumber = 0; rowNumber < rowsCount; rowNumber++) {
             for (int colNumber = 0; colNumber < colsCount; colNumber++) {
-                int symbolNumber = rowNumber + 1;
-                char symbolLetter = (char) ('A' + colNumber);
-                String symbol = "" + symbolLetter + symbolNumber;
-                Tray tray = Tray.builder(symbol).build();
-                trays[rowNumber][colNumber] = tray;
+                if (random.nextInt(10) < 8) {       // probability 0.8
+                    generateTrayAtPosition(rowNumber, colNumber);
+                }
+
+            }
+        }
+    }
+
+    private void generateTrayAtPosition(int rowNumber, int colNumber) {
+        Random random = new Random();
+        long price = random.nextInt(901) + 100;
+        int symbolNumber = rowNumber + 1;
+        char symbolLetter = (char) ('A' + colNumber);
+        String symbol = "" + symbolLetter + symbolNumber;
+        int productProbability = random.nextInt(10);
+        if (productProbability < 1) {
+            Tray tray = Tray
+                    .builder(symbol)
+                    .price(price)
+                    .product(new Product("Product" + symbol))
+                    .product(new Product("Product" + symbol))
+                    .build();
+        } else if ( productProbability < 5) {
+
+        } else {
+
+        }
+        Tray tray = Tray
+                .builder(symbol)                // prob. 01 -> 2x product
+                .price(price)                   // prob. 0.5 -< 1x product
+                .build();
+        trays[rowNumber][colNumber] = tray;
+    }
+
+
+    public Optional<Tray> getTrayAtPosition ( int rowNum, int colNum){
+
+            try {
+                Tray tray = trays[rowNum][colNum];
+                Optional<Tray> wrpappedTray = Optional.ofNullable(tray);
+                return wrpappedTray;
+            } catch (ArrayIndexOutOfBoundsException e) {
+                return Optional.empty();
             }
 
         }
-    }
 
-
-    public Optional<Tray> getTrayAtPosition(int rowNum, int colNum) {
-
-        try {
-            Tray tray = trays[rowNum][colNum];
-            Optional<Tray> wrpappedTray = Optional.ofNullable(tray);
-            return wrpappedTray;
-        } catch (ArrayIndexOutOfBoundsException e) {
-            return Optional.empty();
+        public long rowsCount () {
+            return rowsCount;
         }
 
+        public long colsCount () {
+            return colsCount;
+        }
     }
 
-    public long rowsCount() {
-        return rowsCount;
-    }
-
-    public long colsCount() {
-        return colsCount;
-    }
-}

@@ -1,9 +1,13 @@
 package pl.sdacademy.vending.model;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 public class Tray {
 
     private String symbol;
     private Long price;
+    private Queue <Product> products;
 
 
     public Long getPrice() {
@@ -11,26 +15,32 @@ public class Tray {
     }
 
     public String getSymbol() {
+
         return symbol;
     }
 
 private Tray (Builder builder) {
         symbol = builder.symbol;
         price = builder.price;
+        products = builder.products;
 }
 
 public static Builder builder (String symbol) {
+
         return new Builder(symbol);
 }
 
     public static class Builder {
         private String symbol;
         private Long price;
+        private Queue <Product> products;
 
 
         private Builder (String symbol) {
+
             this.symbol = symbol;
         }
+
         public Tray build () {
             if (price == null || price < 0) {
                 price = 0L;
@@ -39,8 +49,14 @@ public static Builder builder (String symbol) {
 
         }
 
+        public Builder product (Product product) {
+            products.add(product);
+            return this;
+        }
+
         public Builder symbol(String symbol) {
             this.symbol = symbol;
+            products = new ArrayDeque<>();
             return this;
         }
 
