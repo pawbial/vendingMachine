@@ -9,7 +9,7 @@ import java.util.Optional;
 public class CustomerOperationsController {
 
     private final VendingMachine machine;
-    private final Integer trayWidth = 18;
+    private final Integer trayWidth = 12;
 
 
     public CustomerOperationsController(VendingMachine machine) {
