@@ -43,7 +43,7 @@ public class Main {
         String userSelection = new Scanner(System.in).nextLine();
         try {
             Integer menuNumber = Integer.valueOf(userSelection);
-            
+
         }catch (NumberFormatException e) {
             return null;
         }
