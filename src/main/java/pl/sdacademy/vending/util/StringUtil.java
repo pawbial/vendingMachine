@@ -4,6 +4,14 @@ import java.util.Arrays;
 
 public class StringUtil {
 
+    public static String duplicateText (String text, Integer count) {
+        StringBuilder duplicatedText = new StringBuilder();
+        for (int i = 0; i < count; i++) {
+            duplicatedText.append(text);
+        }
+        return duplicatedText.toString();
+    }
+
     public static String adjustText(String text, Integer expectedLength) {
 
         while (text.length() < expectedLength) {
@@ -68,6 +76,6 @@ public class StringUtil {
     public static void main(String[] args) {
 
 
-        System.out.println(formatMoneyMoje(123456L));
+        System.out.println(formatMoney(123456L));
     }
 }

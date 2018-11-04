@@ -95,5 +95,13 @@ public class VendingMachine {
     public long colsCount() {
         return colsCount;
     }
+
+    public Optional <String> productNameAtPosition (Integer rowNo, Integer colNo) {
+
+        //pobrać odpowiednią tackę z tablicy,
+        //pobrać nazwę pierwszego produktu
+        //zwrócić optionala
+        return null;
+    }
 }
 
