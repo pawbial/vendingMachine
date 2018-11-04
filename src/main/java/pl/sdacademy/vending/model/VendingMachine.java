@@ -68,9 +68,12 @@ public class VendingMachine {
                     .build();
             trays[rowNumber][colNumber] = tray;
 // prob. 01 -> 2x product prob. 01 -> 2x product
-        }
 
+
+        }
     }
+
+
 
 
     public Optional<Tray> getTrayAtPosition(int rowNum, int colNum) {

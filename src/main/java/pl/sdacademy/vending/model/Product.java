@@ -12,8 +12,8 @@ public class Product {
         this.name = name;
     }
 
-
-    //    private Product(Builder builder) {
+//
+//        private Product(Builder builder) {
 //
 //        name = builder.name;
 //    }
