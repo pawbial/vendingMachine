@@ -20,6 +20,8 @@ public class Tray {
         return symbol;
     }
 
+
+
     private Tray(Builder builder) {
         symbol = builder.symbol;
         price = builder.price;
@@ -31,10 +33,10 @@ public class Tray {
         return new Builder(symbol);
     }
 
-    public Optional<String> firstProductName () {
+    public  Optional<String> firstProductName () {
 
-        //????????
-        return null;
+        return Optional.ofNullable(products.peek()).map(Product::getName);
+
     }
 
     public static class Builder {

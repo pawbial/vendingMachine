@@ -9,7 +9,7 @@ import java.util.Optional;
 public class CustomerOperationsController {
 
     private final VendingMachine machine;
-    private final Integer trayWidth = 12;
+    private final Integer trayWidth = 18;
 
 
     public CustomerOperationsController(VendingMachine machine) {
@@ -27,8 +27,16 @@ public class CustomerOperationsController {
                 printSymbol(rowNo, colNo);
             }
             System.out.println();
-            //wyświetl nazwę produktu
-            //wyświetlo cenę
+
+            for (int colNo = 0; colNo < machine.colsCount(); colNo++) {
+                printName(rowNo, colNo);
+            }
+            System.out.println();
+
+            for (int colNo = 0; colNo < machine.colsCount(); colNo++) {
+                printPrice(rowNo, colNo);
+            }
+            System.out.println();
 
             for (int colNo = 0; colNo < machine.colsCount(); colNo++) {
                 printLowerBoundary(rowNo, colNo);
@@ -45,10 +53,27 @@ public class CustomerOperationsController {
         Optional<Tray> tray = machine.getTrayAtPosition(rowNo, colNo);
         String traySymbol = tray.map(Tray::getSymbol).orElse("--");
         System.out.print("|" + StringUtil.adjustText(traySymbol,trayWidth) + "|");
+
     }
 
     private void printLowerBoundary(int rowNo, int colNo) {
         System.out.print("+" + StringUtil.duplicateText("-",trayWidth) + "+");
+    }
+
+    private void printName (int rowNo, int colNo) {
+
+        Optional<String> productName = machine.productNameAtPosition(rowNo, colNo);
+        String formattedName = productName.orElse("--");
+        System.out.print("|" + StringUtil.adjustText(formattedName,trayWidth) + "|");
+    }
+
+    private void printPrice (int rowNo, int colNo) {
+        Optional<Tray> tray = machine.getTrayAtPosition(rowNo, colNo);
+        Long price = tray.map(Tray::getPrice).orElse(0L);
+        String formattedMoney = StringUtil.formatMoney(price);
+        String centeredMoney = StringUtil.adjustText(formattedMoney, trayWidth);
+        System.out.print("|" + centeredMoney + "|");
+
     }
 
 }

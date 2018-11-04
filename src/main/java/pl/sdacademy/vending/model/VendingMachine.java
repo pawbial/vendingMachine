@@ -74,8 +74,6 @@ public class VendingMachine {
     }
 
 
-
-
     public Optional<Tray> getTrayAtPosition(int rowNum, int colNum) {
 
         try {
@@ -96,12 +94,15 @@ public class VendingMachine {
         return colsCount;
     }
 
-    public Optional <String> productNameAtPosition (Integer rowNo, Integer colNo) {
+    public Optional<String> productNameAtPosition(Integer rowNo, Integer colNo) {
 
-        //pobrać odpowiednią tackę z tablicy,
-        //pobrać nazwę pierwszego produktu
-        //zwrócić optionala
-        return null;
+        Optional<Tray> tray = getTrayAtPosition(rowNo, colNo);
+        if (tray.isPresent()) {
+            return tray.get().firstProductName();
+        } else {
+            return Optional.empty();
+        }
     }
 }
+
 
