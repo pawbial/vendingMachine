@@ -25,8 +25,8 @@ public class Main {
                 case EXIT:
                     System.out.println("Bye!");
                     return;
-                    default:
-                        System.out.println("Ibvalid selection");
+                default:
+                    System.out.println("Ibvalid selection");
             }
         }
     }
@@ -44,10 +44,10 @@ public class Main {
         try {
             Integer menuNumber = Integer.valueOf(userSelection);
 
-        }catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {
             return null;
         }
-
+        return null;
     }
 
     public static void main(String[] args) {
