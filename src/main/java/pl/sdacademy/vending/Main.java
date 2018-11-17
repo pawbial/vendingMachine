@@ -29,14 +29,13 @@ public class Main {
                         //2. wywołać odpowiednią metodę z controlera (Optional buy product for symbol (String traySymbol)
                         //.3 Jeżeli udało się kupić produkt to wypisujemy, że udało się kupić oraz nazwę
                         //4. Jeżeli nit ro wyświetlamy brak produktu
-                        System.out.println("Please select tray symbol");
+                        System.out.println("Please select tray symbol: ");
                         String userProductSelection = new Scanner(System.in).nextLine();
                         Optional<Product> product = customerOperationsController.buyProductForSymbol(userProductSelection);
                         if (product.isPresent()) {
-                            System.out.println("Sales completed: " + product.get().getName());
+                            System.out.println("Here is your product: " + product.get().getName());
                         } else
-                            System.out.println("Out of product");
-
+                            System.out.println("Out of stock");
                         break;
                     case EXIT:
                         System.out.println("Bye!");
