@@ -34,7 +34,7 @@ public class HardDriveVendingMachineRepository implements VendingMachineReposito
     }
 
     @Override
-    public Optional<VendingMachine> load(VendingMachine vendingMachine) {
+    public Optional<VendingMachine> load() {
         //1. Utworzyć OIS (input Stream)
         // bazując na repolocation odczytać obiekt, rzutować go i opakować w Optional,
         // WAŻNE! Pliku może niebyć na dysku -> Optional.empty ()

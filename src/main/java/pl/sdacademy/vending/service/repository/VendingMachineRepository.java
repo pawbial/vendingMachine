@@ -8,5 +8,5 @@ public interface VendingMachineRepository {
 
     VendingMachine save (VendingMachine vendingMachine);
 
-    Optional<VendingMachine> load (VendingMachine vendingMachine);
+    Optional<VendingMachine> load ();
 }

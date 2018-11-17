@@ -1,8 +1,9 @@
 package pl.sdacademy.vending.util;
 
+import pl.sdacademy.vending.service.repository.VendingMachineRepository;
+
 import java.io.InputStream;
 import java.util.Properties;
-import java.io.IOException;
 
 public class Configuration {
 
