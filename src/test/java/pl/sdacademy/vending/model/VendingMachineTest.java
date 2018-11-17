@@ -8,7 +8,6 @@ import static org.mockito.Matchers.anyLong;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.never;
 
 public class VendingMachineTest {
 
@@ -77,9 +76,38 @@ public class VendingMachineTest {
     }
 
     @Test
-    public void shoudlBeAbleToAddTryToEmptySpot() {
-        // Given
+    public void shouldBeAbleToAddTrayToEmptySpot() {
+        // given
         Tray tray = Tray.builder("A2").build();
+        Configuration config = mock(Configuration.class);
+        doReturn(6L)
+                .when(config)
+                .getLongProperty(
+                        eq("machine.size.rows"),
+                        anyLong()
+                );
+        doReturn(4L)
+                .when(config)
+                .getLongProperty(
+                        eq("machine.size.cols"),
+                        anyLong()
+                );
+        VendingMachine testedMachine = new VendingMachine(config);
+
+        // when
+        boolean placed = testedMachine.placeTray(tray);
+
+
+        // then
+        assertTrue(placed);
+        assertEquals(tray, testedMachine.getTrayAtPosition(0, 1).get());
+    }
+
+    @Test
+    public void shouldNotBeAbleToAddTrayToTakenSpot() {
+    // Given
+        Tray tray = Tray.builder("A2").build();
+        Tray secondTray = Tray.builder("A2").build();
 
 
         Configuration configuration = mock(Configuration.class);
@@ -87,14 +115,15 @@ public class VendingMachineTest {
 
         doReturn(4L).when(configuration).getLongProperty(eq("machine.size.cols"), anyLong());
 
-        VendingMachine testVendingMachine = new VendingMachine(configuration);
-        // When
-
-        boolean placed = testVendingMachine.placeTray(tray);
-
-        // Then
-        assertTrue(placed);
-        testVendingMachine.getTrayAtPosition(6,0);
+        VendingMachine testedMachine = new VendingMachine(configuration);
+    // When
+    boolean firstTrayPlacementResult = testedMachine.placeTray(tray);
+    boolean secondTrayPlacementResult = testedMachine.placeTray(secondTray);
+    // Then
+    assertTrue(firstTrayPlacementResult);
+    assertFalse(secondTrayPlacementResult);
+        assertEquals(tray, testedMachine.getTrayAtPosition(0, 1).get());
     }
+
 
 }

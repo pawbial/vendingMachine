@@ -1,5 +1,6 @@
 package pl.sdacademy.vending.model;
 
+import pl.sdacademy.vending.controller.CustomerOperationsController;
 import pl.sdacademy.vending.util.Configuration;
 import pl.sdacademy.vending.util.StringUtil;
 
@@ -29,17 +30,19 @@ public class VendingMachine {
         }
         trays = new Tray[(int) rowsCount][(int) colsCount];
 
-        Random random = new Random();
-        for (int rowNumber = 0; rowNumber < rowsCount; rowNumber++) {
-            for (int colNumber = 0; colNumber < colsCount; colNumber++) {
-                if (random.nextInt(10) < 8) {       // probability 0.8
-                    generateTrayAtPosition(rowNumber, colNumber);
-                }
-
-            }
-        }
+//        Random random = new Random();
+//        for (int rowNumber = 0; rowNumber < rowsCount; rowNumber++) {
+//            for (int colNumber = 0; colNumber < colsCount; colNumber++) {
+//                if (random.nextInt(10) < 8) {       // probability 0.8
+//                    generateTrayAtPosition(rowNumber, colNumber);
+//                }
+//
+//            }
+//        }
     }
 
+    //Only for overhaull tests of the application
+    // method placeTray is dedicated to solve this problem
     private void generateTrayAtPosition(int rowNumber, int colNumber) {
         Random random = new Random();
         long price = random.nextInt(901) + 100;
@@ -75,17 +78,18 @@ public class VendingMachine {
         }
     }
 
-    public boolean placeTray (Tray tray) {
-        if (tray.getSymbol().length() != 2) {
+    public boolean placeTray(Tray tray) {
+        String symbol = tray.getSymbol();
+        int rowNo = symbol.charAt(0) - 'A';
+        int colNo = symbol.charAt(1) - '1';
+        if (trays[rowNo][colNo] == null){
+            trays[rowNo][colNo] = tray;
+            return true;
+        } else {
             return false;
         }
-        String symbol = tray.getSymbol();
-        int rowNum = symbol.charAt(1) - 'A';
-        int colNum = symbol.charAt(0) - '1';
-        trays [colNum][rowNum] = tray;
-        return true;
-    }
 
+    }
 
     public Optional<Tray> getTrayAtPosition(int rowNum, int colNum) {
 
@@ -134,7 +138,7 @@ public class VendingMachine {
         return Optional.empty();
     }
 
-    public Optional <Product> buyProductWithSymbol2 (String traySymbol) {
+    public Optional<Product> buyProductWithSymbol2(String traySymbol) {
         if (traySymbol.length() != 2) {
             return Optional.empty();
         }
@@ -144,7 +148,7 @@ public class VendingMachine {
         int rowNo = symbolLetter - 'A';
         int colNo = symbolNumber - '1';
 
-        if (rowNo < 0 || rowNo >= rowsCount || colNo <0 || colNo >= colsCount) {
+        if (rowNo < 0 || rowNo >= rowsCount || colNo < 0 || colNo >= colsCount) {
             return Optional.empty();
         }
         Tray tray = trays[rowNo][colNo];
