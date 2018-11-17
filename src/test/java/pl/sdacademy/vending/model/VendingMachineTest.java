@@ -8,6 +8,7 @@ import static org.mockito.Matchers.anyLong;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
 
 public class VendingMachineTest {
 
@@ -15,11 +16,7 @@ public class VendingMachineTest {
     @Test(expected = IllegalArgumentException.class)
     public void shouldThrowExceptionWhenZeroRowsConfigured() {
         // Given
-        Configuration configuration = mock(Configuration.class);
-
-        doReturn(0L).when(configuration).getLongProperty(eq("machine.size.rows"), anyLong());
-
-        doReturn(4L).when(configuration).getLongProperty(eq("machine.size.cols"), anyLong());
+        Configuration configuration = getConfiguration(0L, 4L);
 
 
         // When
@@ -27,6 +24,15 @@ public class VendingMachineTest {
 
         // Then
         fail("Exception should arise");
+    }
+
+    private Configuration getConfiguration(long l, long l2) {
+        Configuration configuration = mock(Configuration.class);
+
+        doReturn(l).when(configuration).getLongProperty(eq("machine.size.rows"), anyLong());
+
+        doReturn(l2).when(configuration).getLongProperty(eq("machine.size.cols"), anyLong());
+        return configuration;
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -68,6 +74,27 @@ public class VendingMachineTest {
         // Then
         fail("Exception should arise");
 
-
     }
+
+    @Test
+    public void shoudlBeAbleToAddTryToEmptySpot() {
+        // Given
+        Tray tray = Tray.builder("A2").build();
+
+
+        Configuration configuration = mock(Configuration.class);
+        doReturn(6L).when(configuration).getLongProperty(eq("machine.size.rows"), anyLong());
+
+        doReturn(4L).when(configuration).getLongProperty(eq("machine.size.cols"), anyLong());
+
+        VendingMachine testVendingMachine = new VendingMachine(configuration);
+        // When
+
+        boolean placed = testVendingMachine.placeTray(tray);
+
+        // Then
+        assertTrue(placed);
+        testVendingMachine.getTrayAtPosition(6,0);
+    }
+
 }

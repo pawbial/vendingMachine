@@ -43,8 +43,8 @@ public class VendingMachine {
     private void generateTrayAtPosition(int rowNumber, int colNumber) {
         Random random = new Random();
         long price = random.nextInt(901) + 100;
-        int symbolNumber = rowNumber + 1;
-        char symbolLetter = (char) ('A' + colNumber);
+        char symbolLetter = (char) ('A' + rowNumber);
+        int symbolNumber = colNumber + 1;
         String symbol = "" + symbolLetter + symbolNumber;
         int productProbability = random.nextInt(10);
         if (productProbability < 1) {
@@ -73,6 +73,17 @@ public class VendingMachine {
 
 
         }
+    }
+
+    public boolean placeTray (Tray tray) {
+        if (tray.getSymbol().length() != 2) {
+            return false;
+        }
+        String symbol = tray.getSymbol();
+        int rowNum = symbol.charAt(1) - 'A';
+        int colNum = symbol.charAt(0) - '1';
+        trays [colNum][rowNum] = tray;
+        return true;
     }
 
 
