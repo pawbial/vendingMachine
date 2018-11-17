@@ -82,7 +82,12 @@ public class VendingMachine {
         String symbol = tray.getSymbol();
         int rowNo = symbol.charAt(0) - 'A';
         int colNo = symbol.charAt(1) - '1';
-        if (trays[rowNo][colNo] == null){
+        if (symbol.length() != 2) {
+            return false;
+        }
+        if (rowNo < 0 || rowNo>= rowsCount || colNo < 0 || colNo >= colsCount) {
+            return false;
+        } else if (trays[rowNo][colNo] == null){
             trays[rowNo][colNo] = tray;
             return true;
         } else {

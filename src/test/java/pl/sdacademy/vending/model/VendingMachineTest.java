@@ -105,7 +105,7 @@ public class VendingMachineTest {
 
     @Test
     public void shouldNotBeAbleToAddTrayToTakenSpot() {
-    // Given
+        // Given
         Tray tray = Tray.builder("A2").build();
         Tray secondTray = Tray.builder("A2").build();
 
@@ -116,14 +116,41 @@ public class VendingMachineTest {
         doReturn(4L).when(configuration).getLongProperty(eq("machine.size.cols"), anyLong());
 
         VendingMachine testedMachine = new VendingMachine(configuration);
-    // When
-    boolean firstTrayPlacementResult = testedMachine.placeTray(tray);
-    boolean secondTrayPlacementResult = testedMachine.placeTray(secondTray);
-    // Then
-    assertTrue(firstTrayPlacementResult);
-    assertFalse(secondTrayPlacementResult);
+        // When
+        boolean firstTrayPlacementResult = testedMachine.placeTray(tray);
+        boolean secondTrayPlacementResult = testedMachine.placeTray(secondTray);
+        // Then
+        assertTrue(firstTrayPlacementResult);
+        assertFalse(secondTrayPlacementResult);
         assertEquals(tray, testedMachine.getTrayAtPosition(0, 1).get());
     }
 
+    @Test
+    public void shouldNotBeAbleToAddTrayToNonExistingPosition() {
+        // given
+        Tray tray = Tray.builder("$$").build();
+        Configuration config = mock(Configuration.class);
+        doReturn(6L)
+                .when(config)
+                .getLongProperty(
+                        eq("machine.size.rows"),
+                        anyLong()
+                );
+        doReturn(4L)
+                .when(config)
+                .getLongProperty(
+                        eq("machine.size.cols"),
+                        anyLong()
+                );
+        VendingMachine testedMachine = new VendingMachine(config);
+
+        // When
+        boolean placed = testedMachine.placeTray(tray);
+
+        // Then
+        assertFalse(placed);
+
+
+    }
 
 }
