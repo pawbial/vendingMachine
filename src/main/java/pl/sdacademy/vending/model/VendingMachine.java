@@ -4,20 +4,21 @@ import pl.sdacademy.vending.controller.CustomerOperationsController;
 import pl.sdacademy.vending.util.Configuration;
 import pl.sdacademy.vending.util.StringUtil;
 
+import java.io.Serializable;
 import java.util.Optional;
 import java.util.Random;
 import java.util.Scanner;
 
-public class VendingMachine {
+public class VendingMachine implements Serializable {
 
-    private Configuration configuration;
+
     private long rowsCount;
     private long colsCount;
     private Tray[][] trays;
+    public static final long serialVersionUID = 1L;
 
     public VendingMachine(Configuration configuration) {
 
-        this.configuration = configuration;
         rowsCount = configuration.getLongProperty("machine.size.rows", 6L);
         colsCount = configuration.getLongProperty("machine.size.cols", 4L);
 

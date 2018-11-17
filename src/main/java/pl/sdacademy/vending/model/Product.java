@@ -1,8 +1,11 @@
 package pl.sdacademy.vending.model;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
 
     private String name;
+    public static final long serialVersionUID = 1L;
 
     public String getName() {
         return name;
