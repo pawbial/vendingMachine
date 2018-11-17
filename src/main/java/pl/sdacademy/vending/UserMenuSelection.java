@@ -8,13 +8,23 @@ public enum UserMenuSelection {
     private final Integer optopnNumber;
     private final String optionText;
 
-    UserMenuSelection(Integer OptopnNumber, String optionText) {
+    UserMenuSelection(Integer OptionNumber, String optionText) {
 
-        optopnNumber = OptopnNumber;
+        optopnNumber = OptionNumber;
         this.optionText = optionText;
     }
 
-    public Integer getOptopnNumber() {
+    public static UserMenuSelection selectionForOptionNumber (Integer requestedOptionNumber) {
+        UserMenuSelection[] values = UserMenuSelection.values();
+        for (UserMenuSelection menuSelection : values) {
+            if (menuSelection.getOptionNumber().equals(requestedOptionNumber)) {
+                return menuSelection;
+            }
+    }
+    throw new IllegalArgumentException("Unknown option number: " + requestedOptionNumber); 
+    }
+
+    public Integer getOptionNumber() {
         return optopnNumber;
     }
 

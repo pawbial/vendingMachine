@@ -21,6 +21,7 @@ public class Main {
 
             switch (userSelection) {
                 case BUY_PRODUCT:
+                    //TODO
                     break;
                 case EXIT:
                     System.out.println("Bye!");
@@ -35,7 +36,7 @@ public class Main {
         UserMenuSelection[] allPosiblleSelections = UserMenuSelection.values();
 
         for (UserMenuSelection menuOption : allPosiblleSelections) {
-            System.out.println(menuOption.getOptopnNumber() + ". " + menuOption.getOptionText());
+            System.out.println(menuOption.getOptionNumber() + ". " + menuOption.getOptionText());
         }
     }
 
