@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc8ed372-766d-44bb-921a-61e6262ef881" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/UserMenuSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/UserMenuSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/sdacademy/vending/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/sdacademy/vending/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/application.properties" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -155,12 +151,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="2" />
-          <entry key="java" value="317" />
+          <entry key="java" value="400" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="317" />
+          <entry key="JAVA" value="400" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -183,8 +179,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/UserMenuSelection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="23" column="91" selection-start-line="23" selection-start-column="91" selection-end-line="23" selection-end-column="91" />
+            <state relative-caret-position="171">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="e#739#740#0" expanded="true" />
                 <element signature="e#774#775#0" expanded="true" />
@@ -363,7 +359,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542443539460" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542445266272" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
@@ -742,8 +738,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/UserMenuSelection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="23" column="91" selection-start-line="23" selection-start-column="91" selection-end-line="23" selection-end-column="91" />
+        <state relative-caret-position="171">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="e#739#740#0" expanded="true" />
             <element signature="e#774#775#0" expanded="true" />
