@@ -4,7 +4,7 @@ import pl.sdacademy.vending.controller.CustomerOperationsController;
 import pl.sdacademy.vending.controller.EmployeeController;
 import pl.sdacademy.vending.controller.service.EmployeeService;
 import pl.sdacademy.vending.model.Product;
-import pl.sdacademy.vending.model.VendingMachine;
+import pl.sdacademy.vending.model.Tray;
 import pl.sdacademy.vending.repository.HardDriveVendingMachineRepository;
 import pl.sdacademy.vending.service.DefaultEmployeeService;
 import pl.sdacademy.vending.service.repository.VendingMachineRepository;
@@ -18,7 +18,7 @@ public class Main {
     Configuration configuration = new Configuration();
     VendingMachineRepository vendingMachineRepository = new HardDriveVendingMachineRepository(configuration);
     CustomerOperationsController customerOperationsController = new CustomerOperationsController(vendingMachineRepository);
-    EmployeeService employeeService = new DefaultEmployeeService(vendingMachineRepository,configuration);
+    EmployeeService employeeService = new DefaultEmployeeService(vendingMachineRepository, configuration);
     EmployeeController employeeController = new EmployeeController(employeeService);
 
     private void startApplication() {
@@ -46,10 +46,13 @@ public class Main {
                     case EXIT:
                         System.out.println("Bye!");
                         return;
+                    case SERVICE_MENU:
+                        handleServiceUser();
+                        break;
                     default:
                         System.out.println("Ibvalid selection");
                 }
-            } catch (IllegalArgumentException e){
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -60,6 +63,66 @@ public class Main {
 
         for (UserMenuSelection menuOption : allPosiblleSelections) {
             System.out.println(menuOption.getOptionNumber() + ". " + menuOption.getOptionText());
+        }
+    }
+
+    private void handleServiceUser() {
+        //Wyświetl menu użytkownika serwisowego (serwisanta)
+        //Odczyt opcji wyboru
+        //dopisać service menu selection
+        //za pomocą switch obsłużyć
+        //dla ADD_TRAY wywołać metodę addTray, z klasy kontroler serwisu
+        printServiceMenu();
+        ServiceMenuSelection serviceSelection = getServiceSelection();
+
+        switch (serviceSelection) {
+            case ADD_TRAY:
+                System.out.println("Please put tray at provided position symbol");
+                employeeController.addTray();
+                break;
+            case REMOVE_TRAY:
+
+                break;
+            case ADD_PRODUCTS_FOR_TRAY:
+
+                break;
+
+            case REMOVE_PRODUCTS_FROM_TRAY:
+
+                break;
+
+            case CHANGE_PRICE:
+
+                break;
+
+            case EXIT:
+
+                break;
+
+            default:
+                System.out.println("Ivalid selection");
+
+        }
+
+    }
+
+    private void printServiceMenu() {
+        ServiceMenuSelection[] allPosiblleSelections = ServiceMenuSelection.values();
+        for (ServiceMenuSelection menuOption : allPosiblleSelections) {
+            System.out.println(menuOption.getOptionNumber() + ". " + menuOption.getOptionMessage());
+        }
+    }
+
+
+    private ServiceMenuSelection getServiceSelection() {
+        System.out.print("> Your selection: ");
+        String userSelection = new Scanner(System.in).nextLine();
+        try {
+            Integer menuNumber = Integer.valueOf(userSelection);
+            return ServiceMenuSelection.selevtionForOptionNumber(menuNumber);
+
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("Invalid selection fomat");
         }
     }
 

@@ -5,14 +5,15 @@ import java.util.Arrays;
 public enum UserMenuSelection {
 
     BUY_PRODUCT(1, "Buy product"),
-    EXIT(9, "Exit");
+    EXIT(9, "Exit"),
+    SERVICE_MENU (0, "Service menu");
 
-    private final Integer optopnNumber;
+    private final Integer optionNumber;
     private final String optionText;
 
     UserMenuSelection(Integer OptionNumber, String optionText) {
 
-        optopnNumber = OptionNumber;
+        optionNumber = OptionNumber;
         this.optionText = optionText;
     }
 
@@ -33,7 +34,7 @@ public enum UserMenuSelection {
     }
 
     public Integer getOptionNumber() {
-        return optopnNumber;
+        return optionNumber;
     }
 
     public String getOptionText() {
