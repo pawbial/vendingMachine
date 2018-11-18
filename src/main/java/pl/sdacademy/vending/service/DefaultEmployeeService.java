@@ -2,6 +2,7 @@ package pl.sdacademy.vending.service;
 
 import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 import pl.sdacademy.vending.controller.service.EmployeeService;
+import pl.sdacademy.vending.model.Product;
 import pl.sdacademy.vending.model.Tray;
 import pl.sdacademy.vending.model.VendingMachine;
 import pl.sdacademy.vending.service.repository.VendingMachineRepository;
@@ -50,6 +51,34 @@ public class DefaultEmployeeService implements EmployeeService {
             }
         } else {
             return Optional.of("There is no vending machine");
+        }
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<String> addProduct(String traySymbol, String productName, Integer quantity) {
+        Optional<VendingMachine> load = machineRepository.load();
+        int fail = 0;
+        int success = 0;
+        if (!load.isPresent()) {
+           return Optional.of("There is no vending machine, please create new one");
+        }
+        if (load.isPresent()) {
+            VendingMachine vendingMachine = load.get();
+            for (int i = 0; i < quantity; i++) {
+                boolean addedProductCount = vendingMachine.addProductToTray(traySymbol, new Product(productName));
+                if (addedProductCount) {
+                    success ++;
+                } else if (!addedProductCount) {
+                    fail++;
+                }
+            machineRepository.save(vendingMachine);
+                if (fail == 0) {
+                    return Optional.empty();
+                }
+                return Optional.of(success + " products added correctly, and " + fail + " not");
+            }
+            machineRepository.save(vendingMachine);
         }
         return Optional.empty();
     }
