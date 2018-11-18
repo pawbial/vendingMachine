@@ -12,6 +12,7 @@ public class EmployeeController {
     private final EmployeeService employeeService;
 
     public EmployeeController(EmployeeService employeeService) {
+
         this.employeeService = employeeService;
     }
 
@@ -26,6 +27,13 @@ public class EmployeeController {
         Tray tray = Tray.builder(traySymbol).price(price).build();
         Optional<String> errorMessage = employeeService.addTray(tray);
         System.out.println(errorMessage.orElse("Tray has been added"));
+
+    }
+
+    public void removeTray () {
+
+        Optional<String> errorMessage =  employeeService.removeTrayWithSymbol(getTraySymbolFromUser());
+        errorMessage.orElse("Tray has been removed");
 
     }
 

@@ -83,6 +83,8 @@ public class Main {
                     employeeController.addTray();
                     break;
                 case REMOVE_TRAY:
+                    System.out.println();
+                    employeeController.removeTray();
 
                     break;
                 case ADD_PRODUCTS_FOR_TRAY:
