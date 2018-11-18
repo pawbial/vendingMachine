@@ -11,6 +11,7 @@ public class Tray implements Serializable {
     private Long price;
     private Queue<Product> products;
     public static final long serialVersionUID = 1L;
+    public static final int MAX_SIZE = 10;
 
 
     public Long getPrice() {
@@ -42,7 +43,18 @@ public class Tray implements Serializable {
     }
 
     public Optional<Product> buyProduct() {
+
         return Optional.ofNullable(products.poll());
+    }
+
+    public boolean addProduct (Product product) {
+
+        if (this.products.size()== MAX_SIZE) {
+            return false;
+        }
+        this.products.add(product);
+
+        return true;
     }
 
     public static class Builder {
