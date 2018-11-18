@@ -72,38 +72,41 @@ public class Main {
         //dopisać service menu selection
         //za pomocą switch obsłużyć
         //dla ADD_TRAY wywołać metodę addTray, z klasy kontroler serwisu
-        printServiceMenu();
-        ServiceMenuSelection serviceSelection = getServiceSelection();
+        while (true) {
+            customerOperationsController.printMachine();
+            printServiceMenu();
+            ServiceMenuSelection serviceSelection = getServiceSelection();
 
-        switch (serviceSelection) {
-            case ADD_TRAY:
-                System.out.println("Please put tray at provided position symbol");
-                employeeController.addTray();
-                break;
-            case REMOVE_TRAY:
+            switch (serviceSelection) {
+                case ADD_TRAY:
+                    System.out.println("Please put tray at provided position symbol, and set price");
+                    employeeController.addTray();
+                    break;
+                case REMOVE_TRAY:
 
-                break;
-            case ADD_PRODUCTS_FOR_TRAY:
+                    break;
+                case ADD_PRODUCTS_FOR_TRAY:
 
-                break;
+                    break;
 
-            case REMOVE_PRODUCTS_FROM_TRAY:
+                case REMOVE_PRODUCTS_FROM_TRAY:
 
-                break;
+                    break;
 
-            case CHANGE_PRICE:
+                case CHANGE_PRICE:
 
-                break;
+                    break;
 
-            case EXIT:
+                case EXIT:
+                    startApplication();
+                    break;
 
-                break;
+                default:
+                    System.out.println("Ivalid selection");
 
-            default:
-                System.out.println("Ivalid selection");
+            }
 
         }
-
     }
 
     private void printServiceMenu() {
