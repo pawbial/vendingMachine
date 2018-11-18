@@ -143,6 +143,19 @@ public class VendingMachine implements Serializable {
         }
     }
 
+    public boolean addProductToTray (String traySymbol, Product product) {
+        Optional<Tray> currentTray = getTrayForSymbol(traySymbol);
+//        Jako Stream
+//        currentTray.map(tray -> tray.addProduct(product)).orElse(false);
+        if (currentTray.isPresent()){
+            currentTray.get().addProduct(product);
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
     public Optional<Product> buyProductWithSymbol(String traySymbol) {
 
 
@@ -180,6 +193,16 @@ public class VendingMachine implements Serializable {
         } else {
             return tray.buyProduct();
         }
+    }
+
+    private Optional <Tray> getTrayForSymbol (String traySymbol) {
+        if (traySymbol.length() != 2) {
+            return Optional.empty();
+        }
+        int rowNo = traySymbol.charAt(0) - 'A';
+        int colNo = traySymbol.charAt(1) - '1';
+
+       return getTrayAtPosition(rowNo,colNo);
     }
 
 
