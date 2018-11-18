@@ -33,7 +33,7 @@ public class DefaultEmployeeService implements EmployeeService {
         if (check) {
             machineRepository.save(vendingMachine);
         } else {
-            String serviceError = "Service Error";
+            String serviceError = "Service Error, could not add tray, check providaded machine";
            return Optional.of(serviceError);
         }
 
