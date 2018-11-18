@@ -3,40 +3,48 @@ package pl.sdacademy.vending.controller;
 import pl.sdacademy.vending.model.Product;
 import pl.sdacademy.vending.model.Tray;
 import pl.sdacademy.vending.model.VendingMachine;
+import pl.sdacademy.vending.service.repository.VendingMachineRepository;
 import pl.sdacademy.vending.util.StringUtil;
 
 import java.util.Optional;
 
 public class CustomerOperationsController {
 
-    private final VendingMachine machine;
+
     private final Integer trayWidth = 12;
+    private final VendingMachineRepository machineRepository;
 
 
-    public CustomerOperationsController(VendingMachine machine) {
+    public CustomerOperationsController(VendingMachineRepository machineRepository) {
 
-        this.machine = machine;
+        this.machineRepository = machineRepository;
     }
 
     public void printMachine() {
+        Optional<VendingMachine> loadedMachine = machineRepository.load();
+        if (!loadedMachine.isPresent()) {
+            System.out.println("Vending machine out of service");
+            return;
+        }
+        VendingMachine machine = loadedMachine.get();
         for (int rowNo = 0; rowNo < machine.rowsCount(); rowNo++) {
             for (int colNo = 0; colNo < machine.colsCount(); colNo++) {
-                printUpperBoundary(rowNo, colNo);
+                printUpperBoundary(machine,rowNo, colNo);
             }
             System.out.println();
 
             for (int colNo = 0; colNo < machine.colsCount(); colNo++) {
-                printSymbol(rowNo, colNo);
+                printSymbol(machine,rowNo, colNo);
             }
             System.out.println();
 
             for (int colNo = 0; colNo < machine.colsCount(); colNo++) {
-                printName(rowNo, colNo);
+                printName(machine,rowNo, colNo);
             }
             System.out.println();
 
             for (int colNo = 0; colNo < machine.colsCount(); colNo++) {
-                printPrice(rowNo, colNo);
+                printPrice(machine,rowNo, colNo);
             }
             System.out.println();
 
@@ -48,14 +56,23 @@ public class CustomerOperationsController {
     }
 
     public Optional <Product> buyProductForSymbol (String traySymbol) {
-        return machine.buyProductWithSymbol(traySymbol);
+        Optional<VendingMachine> loadedMachine = machineRepository.load();
+        if (loadedMachine.isPresent()) {
+            VendingMachine machine = loadedMachine.get();
+            Optional<Product> boughtProduct = machine.buyProductWithSymbol(traySymbol);
+            machineRepository.save(machine);
+            return boughtProduct;
+        } else {
+            System.out.println("Vending Machone out of service");
+            return Optional.empty();
+        }
     }
 
-    private void printUpperBoundary(int rowNo, int colNo) {
+    private void printUpperBoundary(VendingMachine machine,  int rowNo, int colNo) {
         System.out.print("+" + StringUtil.duplicateText("-",trayWidth) + "+");
     }
 
-    private void printSymbol(int rowNo, int colNo) {
+    private void printSymbol(VendingMachine machine,  int rowNo, int colNo) {
         Optional<Tray> tray = machine.getTrayAtPosition(rowNo, colNo);
         String traySymbol = tray.map(Tray::getSymbol).orElse("--");
         System.out.print("|" + StringUtil.adjustText(traySymbol,trayWidth) + "|");
@@ -66,14 +83,14 @@ public class CustomerOperationsController {
         System.out.print("+" + StringUtil.duplicateText("-",trayWidth) + "+");
     }
 
-    private void printName (int rowNo, int colNo) {
+    private void printName (VendingMachine machine,  int rowNo, int colNo) {
 
         Optional<String> productName = machine.productNameAtPosition(rowNo, colNo);
         String formattedName = productName.orElse("--");
         System.out.print("|" + StringUtil.adjustText(formattedName,trayWidth) + "|");
     }
 
-    private void printPrice (int rowNo, int colNo) {
+    private void printPrice (VendingMachine machine,  int rowNo, int colNo) {
         Optional<Tray> tray = machine.getTrayAtPosition(rowNo, colNo);
         Long price = tray.map(Tray::getPrice).orElse(0L);
         String formattedMoney = StringUtil.formatMoney(price);

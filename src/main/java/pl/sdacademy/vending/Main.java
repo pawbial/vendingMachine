@@ -1,8 +1,13 @@
 package pl.sdacademy.vending;
 
 import pl.sdacademy.vending.controller.CustomerOperationsController;
+import pl.sdacademy.vending.controller.EmployeeController;
+import pl.sdacademy.vending.controller.service.EmployeeService;
 import pl.sdacademy.vending.model.Product;
 import pl.sdacademy.vending.model.VendingMachine;
+import pl.sdacademy.vending.repository.HardDriveVendingMachineRepository;
+import pl.sdacademy.vending.service.DefaultEmployeeService;
+import pl.sdacademy.vending.service.repository.VendingMachineRepository;
 import pl.sdacademy.vending.util.Configuration;
 
 import java.util.Optional;
@@ -11,9 +16,10 @@ import java.util.Scanner;
 public class Main {
 
     Configuration configuration = new Configuration();
-    VendingMachine vendingMachine = new VendingMachine(configuration);
-    CustomerOperationsController customerOperationsController = new CustomerOperationsController(vendingMachine);
-
+    VendingMachineRepository vendingMachineRepository = new HardDriveVendingMachineRepository(configuration);
+    CustomerOperationsController customerOperationsController = new CustomerOperationsController(vendingMachineRepository);
+    EmployeeService employeeService = new DefaultEmployeeService(vendingMachineRepository,configuration);
+    EmployeeController employeeController = new EmployeeController(employeeService);
 
     private void startApplication() {
         while (true) {

@@ -44,10 +44,10 @@ public class HardDriveVendingMachineRepository implements VendingMachineReposito
         return Optional.ofNullable(loaded);
         } catch (IOException e) {
             System.out.println("Repository not found");
-            e.printStackTrace();
+
         } catch (ClassNotFoundException e) {
             System.out.println("Class not found");
-            e.printStackTrace();
+
         }
         return Optional.empty();
     }
