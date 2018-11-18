@@ -97,6 +97,25 @@ public class VendingMachine implements Serializable {
 
     }
 
+    public Optional <Tray> removeTrayWithSymbol (String traySymbol) {
+
+        int rowNo = traySymbol.charAt(0) - 'A';
+        int colNo = traySymbol.charAt(1) - '1';
+
+        if (traySymbol.length() != 2) {
+            return Optional.empty();
+        }
+        if (rowNo < 0 || rowNo>= rowsCount || colNo < 0 || colNo >= colsCount) {
+            return Optional.empty();
+        } else if (!(trays[rowNo][colNo] == null)){
+            Tray removedTray = trays[rowNo][colNo];
+            trays[rowNo][colNo] = null;
+            return Optional.of(removedTray);
+        } else {
+            return Optional.empty();
+        }
+    }
+
     public Optional<Tray> getTrayAtPosition(int rowNum, int colNum) {
 
         try {

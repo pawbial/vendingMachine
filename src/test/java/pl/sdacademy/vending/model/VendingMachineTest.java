@@ -3,6 +3,8 @@ package pl.sdacademy.vending.model;
 import org.junit.Test;
 import pl.sdacademy.vending.util.Configuration;
 
+import java.util.Optional;
+
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.anyLong;
 import static org.mockito.Matchers.eq;
@@ -152,5 +154,74 @@ public class VendingMachineTest {
 
 
     }
+
+    @Test
+    public void shouldReturnEmptyOptionalIfTrayCouldNotBeRemoved() {
+        // Given
+        String traySymbol = "A1";
+        Configuration mockedConfiguration = getMockedConfiguration();
+        VendingMachine testedMachine = new VendingMachine(mockedConfiguration);
+        // When
+        Optional<Tray> removedTray = testedMachine.removeTrayWithSymbol(traySymbol);
+        // Then
+        assertFalse(removedTray.isPresent());
+
+    }
+
+    @Test
+    public void schouldBeAbleToRemoveTray() {
+        // Given
+        String traySymbol = "B2";
+        Configuration mockedConfig = getMockedConfiguration();
+        VendingMachine testedMachine = new VendingMachine(mockedConfig);
+        Tray tray = Tray.builder(traySymbol).build();
+        testedMachine.placeTray(tray);
+        // When
+        Optional<Tray> removedTray = testedMachine.removeTrayWithSymbol(traySymbol);
+
+        // Then
+        assertTrue(removedTray.isPresent());
+        assertEquals(tray,removedTray.get());
+
+    }
+
+    @Test
+    public void removedTrayShouldNotBeAvialable() {
+    // Given
+
+        //Stworzyć automat  jedną tacką, usunąć tackę i sprawdzić
+        //czy po usunięciu tacki metoda getTrayAtPosition zwraca OptionallEmpty
+        String traySymbol = "A1";
+        Configuration mockedConfig = getMockedConfiguration();
+        VendingMachine testedMachine = new VendingMachine(mockedConfig);
+        Tray tray = Tray.builder(traySymbol).build();
+        testedMachine.placeTray(tray);
+    // When
+        Optional<Tray> removedTray = testedMachine.removeTrayWithSymbol(traySymbol);
+
+    // Then
+        assertEquals(testedMachine.getTrayAtPosition(0,0),Optional.empty());
+
+    }
+
+
+
+    private Configuration getMockedConfiguration() {
+        Configuration config = mock(Configuration.class);
+        doReturn(6L)
+                .when(config)
+                .getLongProperty(
+                        eq("machine.size.rows"),
+                        anyLong()
+                );
+        doReturn(4L)
+                .when(config)
+                .getLongProperty(
+                        eq("machine.size.cols"),
+                        anyLong()
+                );
+        return config;
+    }
+
 
 }
