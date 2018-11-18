@@ -58,10 +58,33 @@ public class EmployeeController {
     }
 
     private String getTraySymbolFromUser() {
-        System.out.print("> Provide tray symbol");
+        System.out.print("> Please provide tray symbol");
         return String.valueOf(getUserInput());
     }
 
+    public void addProduct () {
+        String traySymbol = traySymbolFromUser();
+        String productName = productNameFromUser();
+        Integer productQuantity = productQuantityFromUser();
+        Optional<String> errorMessage = Optional.of(employeeService.addProduct(traySymbol, productName, productQuantity)
+                .orElse("All products have been added");
+    }
+
+    private Integer productQuantityFromUser() {
+        return Integer.parseInt(getUserInput());
+    }
+
+    private String productNameFromUser() {
+        String productName = getUserInput();
+        System.out.println("> Please define product quantity");
+        return productName;
+    }
+
+    private String traySymbolFromUser() {
+        String traySymbol = getTraySymbolFromUser();
+        System.out.println("> Please provide product name");
+        return traySymbol;
+    }
 
 
 }

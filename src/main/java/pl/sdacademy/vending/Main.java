@@ -83,11 +83,13 @@ public class Main {
                     employeeController.addTray();
                     break;
                 case REMOVE_TRAY:
-                    System.out.println();
+                    System.out.println("Please select tray to remove");
                     employeeController.removeTray();
 
                     break;
                 case ADD_PRODUCTS_FOR_TRAY:
+                    System.out.println("Provide data for product to add");
+                    employeeController.addProduct();
 
                     break;
 
