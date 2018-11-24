@@ -44,10 +44,10 @@ public class ConfigurationTest {
     public void shouldReturnAcutalLongValueFromFile() {
         // Given
         String knownValue = "test.property.long";
-        Long expectedDefault = 8L;
+        long expectedDefault = 8L;
 
         // When
-        Long propertyValue = testConfig.getLongProperty(knownValue, expectedDefault);
+        long propertyValue = testConfig.getLongProperty(knownValue, expectedDefault);
         // Then
         System.out.println(propertyValue);
         assertEquals(propertyValue, knownValue);
@@ -58,10 +58,10 @@ public class ConfigurationTest {
     public void shouldReturnDefaultLongValue() {
         // Given
         String unknownValue = "ABC";
-        Long expectedDefault = 5L;
+        long expectedDefault = 5L;
 
         // When
-        Long propertyValue = testConfig.getLongProperty(unknownValue, expectedDefault);
+        long propertyValue = testConfig.getLongProperty(unknownValue, expectedDefault);
         // Then
         assertEquals(propertyValue, expectedDefault);
     }

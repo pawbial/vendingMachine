@@ -1,7 +1,5 @@
 package pl.sdacademy.vending.util;
 
-import pl.sdacademy.vending.service.repository.VendingMachineRepository;
-
 import java.io.InputStream;
 import java.util.Properties;
 
@@ -24,7 +22,7 @@ public class Configuration {
 
     }
 
-    public long getLongProperty(String paramName, Long defaultValue) {
+    public long getLongProperty(String paramName, long defaultValue) {
             String propertyValue = properties.getProperty(paramName);
             if (propertyValue == null) {
                 return defaultValue;

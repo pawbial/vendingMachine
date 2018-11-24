@@ -4,14 +4,12 @@ import pl.sdacademy.vending.controller.CustomerOperationsController;
 import pl.sdacademy.vending.controller.EmployeeOperationsController;
 import pl.sdacademy.vending.controller.service.CustomerService;
 import pl.sdacademy.vending.controller.service.EmployeeService;
-import pl.sdacademy.vending.model.Product;
 import pl.sdacademy.vending.repository.HardDriveVendingMachineRepository;
 import pl.sdacademy.vending.service.DefaultCustomerService;
 import pl.sdacademy.vending.service.DefaultEmployeeService;
 import pl.sdacademy.vending.service.repository.VendingMachineRepository;
 import pl.sdacademy.vending.util.Configuration;
 
-import java.util.Optional;
 import java.util.Scanner;
 
 public class Main {
