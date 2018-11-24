@@ -57,6 +57,12 @@ public class Tray implements Serializable {
         return true;
     }
 
+    public void updatePrice (Long price) {
+        //zmienia cene w aktualnej tacce
+    }
+
+
+
     public static class Builder {
         private String symbol;
         private Long price;

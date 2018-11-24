@@ -32,7 +32,7 @@ public class DefaultEmployeeService implements EmployeeService {
         if (check) {
             machineRepository.save(vendingMachine);
         } else {
-            String serviceError = "Service Error, could not add tray, check providaded machine";
+            String serviceError = "Service Error, could not add tray, check provided machine";
             return Optional.of(serviceError);
         }
 
@@ -75,6 +75,24 @@ public class DefaultEmployeeService implements EmployeeService {
         }
         machineRepository.save(machine);
         return Optional.empty();
+    }
+
+    @Override
+    public Optional<String> changePrice(String traySymbol, Long updatedPrice) {
+        Optional<VendingMachine> loadedMachine = machineRepository.load();
+        if (!loadedMachine.isPresent()) {
+            VendingMachine vendingMachine = loadedMachine.get();
+            boolean succesfull = vendingMachine.updatePriceForSymbol(traySymbol, updatedPrice);
+            machineRepository.save(vendingMachine);
+            if (succesfull){
+                return Optional.empty();
+            } else {
+                return Optional.of("Could not change price, check tray symbol");
+            }
+
+        }
+
+        return Optional.of("There is no vending machine, create one");
     }
 }
 

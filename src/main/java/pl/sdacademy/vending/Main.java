@@ -1,10 +1,9 @@
 package pl.sdacademy.vending;
 
 import pl.sdacademy.vending.controller.CustomerOperationsController;
-import pl.sdacademy.vending.controller.EmployeeController;
+import pl.sdacademy.vending.controller.EmployeeOperationsController;
 import pl.sdacademy.vending.controller.service.EmployeeService;
 import pl.sdacademy.vending.model.Product;
-import pl.sdacademy.vending.model.Tray;
 import pl.sdacademy.vending.repository.HardDriveVendingMachineRepository;
 import pl.sdacademy.vending.service.DefaultEmployeeService;
 import pl.sdacademy.vending.service.repository.VendingMachineRepository;
@@ -19,7 +18,7 @@ public class Main {
     VendingMachineRepository vendingMachineRepository = new HardDriveVendingMachineRepository(configuration);
     CustomerOperationsController customerOperationsController = new CustomerOperationsController(vendingMachineRepository);
     EmployeeService employeeService = new DefaultEmployeeService(vendingMachineRepository, configuration);
-    EmployeeController employeeController = new EmployeeController(employeeService);
+    EmployeeOperationsController employeeController = new EmployeeOperationsController(employeeService);
 
     private void startApplication() {
         while (true) {

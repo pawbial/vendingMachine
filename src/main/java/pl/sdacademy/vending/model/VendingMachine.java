@@ -126,10 +126,12 @@ public class VendingMachine implements Serializable {
     }
 
     public long rowsCount() {
+
         return rowsCount;
     }
 
     public long colsCount() {
+
         return colsCount;
     }
 
@@ -203,6 +205,12 @@ public class VendingMachine implements Serializable {
         int colNo = traySymbol.charAt(1) - '1';
 
        return getTrayAtPosition(rowNo,colNo);
+    }
+
+    public boolean updatePriceForSymbol (String symbol, Long price) {
+
+
+        return false;
     }
 
 

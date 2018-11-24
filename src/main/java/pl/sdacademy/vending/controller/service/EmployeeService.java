@@ -12,5 +12,7 @@ public interface EmployeeService {
 
      Optional <String> addProduct (String traySymbol, String productName, Integer quantity);
 
+     Optional <String> changePrice (String traySymbol, Long updatedPrice);
+
 
 }

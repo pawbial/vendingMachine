@@ -6,12 +6,12 @@ import pl.sdacademy.vending.model.Tray;
 import java.util.Optional;
 import java.util.Scanner;
 
-public class EmployeeController {
+public class EmployeeOperationsController {
 
 
     private final EmployeeService employeeService;
 
-    public EmployeeController(EmployeeService employeeService) {
+    public EmployeeOperationsController(EmployeeService employeeService) {
 
         this.employeeService = employeeService;
     }
@@ -39,28 +39,7 @@ public class EmployeeController {
 
 
 
-    private Long getTrayPriceFromUser() {
-        Long price = null;
-        while (price == null) {
-            System.out.println("> Provide price (cents)");
-          try {
-              price = Long.parseLong(getUserInput());
-          } catch (NumberFormatException e) {
-              System.out.println("Ivalid price. Try again");
-          }
-        }
 
-        return price;
-    }
-
-    private String getUserInput() {
-        return new Scanner(System.in).nextLine();
-    }
-
-    private String getTraySymbolFromUser() {
-        System.out.print("> Please provide tray symbol");
-        return String.valueOf(getUserInput());
-    }
 
     public void addProduct () {
         String traySymbol = traySymbolFromUser();
@@ -70,7 +49,13 @@ public class EmployeeController {
                 .orElse("All products have been added"));
     }
 
+    public void changePrice () {
+        //pobrać od użytkownika symbol tacki i nową cenę
+        //wywołać odpowiednią metodę z serwisu i wyświetlić komunikat
+    }
+
     private Integer productQuantityFromUser() {
+
         return Integer.parseInt(getUserInput());
     }
 
@@ -84,6 +69,29 @@ public class EmployeeController {
         String traySymbol = getTraySymbolFromUser();
         System.out.println("> Please provide product name");
         return traySymbol;
+    }
+
+    private String getUserInput() {
+        return new Scanner(System.in).nextLine();
+    }
+
+    private String getTraySymbolFromUser() {
+        System.out.print("> Please provide tray symbol");
+        return String.valueOf(getUserInput());
+    }
+
+    private Long getTrayPriceFromUser() {
+        Long price = null;
+        while (price == null) {
+            System.out.println("> Provide price (cents)");
+            try {
+                price = Long.parseLong(getUserInput());
+            } catch (NumberFormatException e) {
+                System.out.println("Ivalid price. Try again");
+            }
+        }
+
+        return price;
     }
 
 
