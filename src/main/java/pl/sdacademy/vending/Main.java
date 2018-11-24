@@ -2,9 +2,11 @@ package pl.sdacademy.vending;
 
 import pl.sdacademy.vending.controller.CustomerOperationsController;
 import pl.sdacademy.vending.controller.EmployeeOperationsController;
+import pl.sdacademy.vending.controller.service.CustomerService;
 import pl.sdacademy.vending.controller.service.EmployeeService;
 import pl.sdacademy.vending.model.Product;
 import pl.sdacademy.vending.repository.HardDriveVendingMachineRepository;
+import pl.sdacademy.vending.service.DefaultCustomerService;
 import pl.sdacademy.vending.service.DefaultEmployeeService;
 import pl.sdacademy.vending.service.repository.VendingMachineRepository;
 import pl.sdacademy.vending.util.Configuration;
@@ -16,9 +18,10 @@ public class Main {
 
     Configuration configuration = new Configuration();
     VendingMachineRepository vendingMachineRepository = new HardDriveVendingMachineRepository(configuration);
-    CustomerOperationsController customerOperationsController = new CustomerOperationsController(vendingMachineRepository);
     EmployeeService employeeService = new DefaultEmployeeService(vendingMachineRepository, configuration);
-    EmployeeOperationsController employeeController = new EmployeeOperationsController(employeeService);
+    CustomerService customerService = new DefaultCustomerService(vendingMachineRepository);
+    CustomerOperationsController customerOperationsController = new CustomerOperationsController(customerService);
+    EmployeeOperationsController employeeOperationsController = new EmployeeOperationsController(employeeService);
 
     private void startApplication() {
         while (true) {
@@ -30,17 +33,7 @@ public class Main {
 
                 switch (userSelection) {
                     case BUY_PRODUCT:
-                        //1. pobrać symbol tacki
-                        //2. wywołać odpowiednią metodę z controlera (Optional buy product for symbol (String traySymbol)
-                        //.3 Jeżeli udało się kupić produkt to wypisujemy, że udało się kupić oraz nazwę
-                        //4. Jeżeli nit ro wyświetlamy brak produktu
-                        System.out.println("Please select tray symbol: ");
-                        String userProductSelection = new Scanner(System.in).nextLine();
-                        Optional<Product> product = customerOperationsController.buyProductForSymbol(userProductSelection);
-                        if (product.isPresent()) {
-                            System.out.println("Here is your product: " + product.get().getName());
-                        } else
-                            System.out.println("Out of stock");
+                      customerOperationsController.buyProduct();
                         break;
                     case EXIT:
                         System.out.println("Bye!");
@@ -79,16 +72,16 @@ public class Main {
             switch (serviceSelection) {
                 case ADD_TRAY:
                     System.out.println("Please put tray at provided position symbol, and set price");
-                    employeeController.addTray();
+                    employeeOperationsController.addTray();
                     break;
                 case REMOVE_TRAY:
                     System.out.println("Please select tray to remove");
-                    employeeController.removeTray();
+                    employeeOperationsController.removeTray();
 
                     break;
                 case ADD_PRODUCTS_FOR_TRAY:
                     System.out.println("Provide data for product to add");
-                    employeeController.addProduct();
+                    employeeOperationsController.addProduct();
 
                     break;
 
@@ -98,7 +91,7 @@ public class Main {
 
                 case CHANGE_PRICE:
                     System.out.println("Set new price for defined tray");
-                    employeeController.changePrice();
+                    employeeOperationsController.changePrice();
                     break;
 
                 case EXIT:

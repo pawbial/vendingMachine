@@ -1,5 +1,6 @@
 package pl.sdacademy.vending.controller;
 
+import pl.sdacademy.vending.controller.service.CustomerService;
 import pl.sdacademy.vending.model.Product;
 import pl.sdacademy.vending.model.Tray;
 import pl.sdacademy.vending.model.VendingMachine;
@@ -7,21 +8,32 @@ import pl.sdacademy.vending.service.repository.VendingMachineRepository;
 import pl.sdacademy.vending.util.StringUtil;
 
 import java.util.Optional;
+import java.util.Scanner;
 
 public class CustomerOperationsController {
 
 
     private final Integer trayWidth = 12;
-    private final VendingMachineRepository machineRepository;
+    private CustomerService customerService;
 
 
-    public CustomerOperationsController(VendingMachineRepository machineRepository) {
+    public CustomerOperationsController(CustomerService customerService) {
 
-        this.machineRepository = machineRepository;
+        this.customerService = customerService;
+    }
+
+    public void buyProduct () {
+        System.out.println("> Please select tray symbol: ");
+        String userProductSelection = new Scanner(System.in).nextLine();
+        Optional<Product> product = customerService.buyProductFromTray(userProductSelection);
+        if (product.isPresent()) {
+            System.out.println("Here is your product: " + product.get().getName());
+        } else
+            System.out.println("Out of stock");
     }
 
     public void printMachine() {
-        Optional<VendingMachine> loadedMachine = machineRepository.load();
+        Optional<VendingMachine> loadedMachine = customerService.loadMachineToPrint();
         if (!loadedMachine.isPresent()) {
             System.out.println("Vending machine out of service");
             return;
@@ -55,18 +67,7 @@ public class CustomerOperationsController {
         }
     }
 
-    public Optional <Product> buyProductForSymbol (String traySymbol) {
-        Optional<VendingMachine> loadedMachine = machineRepository.load();
-        if (loadedMachine.isPresent()) {
-            VendingMachine machine = loadedMachine.get();
-            Optional<Product> boughtProduct = machine.buyProductWithSymbol(traySymbol);
-            machineRepository.save(machine);
-            return boughtProduct;
-        } else {
-            System.out.println("Vending Machone out of service");
-            return Optional.empty();
-        }
-    }
+
 
     private void printUpperBoundary(VendingMachine machine,  int rowNo, int colNo) {
         System.out.print("+" + StringUtil.duplicateText("-",trayWidth) + "+");
