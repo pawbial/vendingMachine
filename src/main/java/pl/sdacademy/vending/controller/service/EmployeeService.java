@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public interface EmployeeService {
 
-     Optional <String> addTray (Tray tray);
+     Optional <String> addTray (String traySymbol, Long price);
 
      Optional <String> removeTrayWithSymbol (String traySymbol);
 

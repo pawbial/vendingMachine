@@ -21,12 +21,10 @@ public class DefaultEmployeeService implements EmployeeService {
     }
 
     @Override
-    public Optional<String> addTray(Tray tray) {
-        //Załaduj vendingMachine z repo, dodaj tackę, sprawdź czy zadziałało,
-        //jeżeli tak, to zapisujemy automat, jeżeli nie to komunikat błędu
+    public Optional<String> addTray(String traySymbol, Long price) {
         Optional<VendingMachine> load = machineRepository.load();
-
         VendingMachine vendingMachine = (VendingMachine) load.orElseGet(() -> new VendingMachine(configuration));
+        Tray tray = Tray.builder(traySymbol).price(price).build();
         boolean check = vendingMachine.placeTray(tray);
 
         if (check) {

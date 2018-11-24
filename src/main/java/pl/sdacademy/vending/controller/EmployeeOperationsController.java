@@ -24,8 +24,7 @@ public class EmployeeOperationsController {
         // Print or error
         String traySymbol = getTraySymbolFromUser();
         Long price = getTrayPriceFromUser();
-        Tray tray = Tray.builder(traySymbol).price(price).build();
-        Optional<String> errorMessage = employeeService.addTray(tray);
+        Optional<String> errorMessage = employeeService.addTray(traySymbol,price);
         System.out.println(errorMessage.orElse("Tray has been added"));
 
     }
