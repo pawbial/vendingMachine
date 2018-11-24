@@ -34,6 +34,7 @@ public class EmployeeOperationsController {
 
         Optional<String> errorMessage =  employeeService.removeTrayWithSymbol(getTraySymbolFromUser());
         errorMessage.orElse("Tray has been removed");
+        System.out.println(errorMessage.get());
 
     }
 
@@ -47,11 +48,17 @@ public class EmployeeOperationsController {
         Integer productQuantity = productQuantityFromUser();
         Optional<String> errorMessage = Optional.of(employeeService.addProduct(traySymbol, productName, productQuantity)
                 .orElse("All products have been added"));
+        System.out.println(errorMessage.get());
     }
 
     public void changePrice () {
         //pobrać od użytkownika symbol tacki i nową cenę
         //wywołać odpowiednią metodę z serwisu i wyświetlić komunikat
+        String traySymbol = traySymbolFromUser();
+        Long updatedPrice = getTrayPriceFromUser();
+        Optional <String> errorMessage = Optional.of(employeeService.changePrice(traySymbol,updatedPrice))
+                .orElse(Optional.of("Price has been updated"));
+        System.out.println(errorMessage.get());
     }
 
     private Integer productQuantityFromUser() {

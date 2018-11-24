@@ -197,6 +197,19 @@ public class VendingMachine implements Serializable {
         }
     }
 
+    public boolean updatePriceForSymbol (String symbol, Long price) {
+
+        Optional<Tray> trayToChange = getTrayForSymbol(symbol);
+
+        if (trayToChange.isPresent()){
+            Tray tray = trayToChange.get();
+            tray.updatePrice(price);
+            return true;
+        }
+
+        return false;
+    }
+
     private Optional <Tray> getTrayForSymbol (String traySymbol) {
         if (traySymbol.length() != 2) {
             return Optional.empty();
@@ -205,12 +218,6 @@ public class VendingMachine implements Serializable {
         int colNo = traySymbol.charAt(1) - '1';
 
        return getTrayAtPosition(rowNo,colNo);
-    }
-
-    public boolean updatePriceForSymbol (String symbol, Long price) {
-
-
-        return false;
     }
 
 

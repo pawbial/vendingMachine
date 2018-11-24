@@ -58,7 +58,7 @@ public class Tray implements Serializable {
     }
 
     public void updatePrice (Long price) {
-        //zmienia cene w aktualnej tacce
+        this.price = price;
     }
 
 

@@ -97,12 +97,13 @@ public class Main {
                     break;
 
                 case CHANGE_PRICE:
-
+                    System.out.println("Set new price for defined tray");
+                    employeeController.changePrice();
                     break;
 
                 case EXIT:
-                    startApplication();
-                    break;
+                  return;
+
 
                 default:
                     System.out.println("Ivalid selection");
