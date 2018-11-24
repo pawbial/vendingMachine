@@ -46,9 +46,9 @@ public class EmployeeOperationsController {
         String traySymbol = traySymbolFromUser();
         String productName = productNameFromUser();
         Integer productQuantity = productQuantityFromUser();
-        Optional<String> errorMessage = Optional.of(employeeService.addProduct(traySymbol, productName, productQuantity)
-                .orElse("All products have been added"));
-        System.out.println(errorMessage.get());
+        String errorMessage = employeeService.addProduct(traySymbol, productName, productQuantity)
+                .orElse("All products have been added");
+        System.out.println(errorMessage);
     }
 
     public void changePrice () {
@@ -56,9 +56,9 @@ public class EmployeeOperationsController {
         //wywołać odpowiednią metodę z serwisu i wyświetlić komunikat
         String traySymbol = traySymbolFromUser();
         Long updatedPrice = getTrayPriceFromUser();
-        Optional <String> errorMessage = Optional.of(employeeService.changePrice(traySymbol,updatedPrice))
-                .orElse(Optional.of("Price has been updated"));
-        System.out.println(errorMessage.get());
+        String errorMessage = employeeService.changePrice(traySymbol,updatedPrice)
+                .orElse("Price has been updated");
+        System.out.println(errorMessage);
     }
 
     private Integer productQuantityFromUser() {

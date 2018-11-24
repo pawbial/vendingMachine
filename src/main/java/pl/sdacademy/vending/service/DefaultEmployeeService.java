@@ -80,7 +80,7 @@ public class DefaultEmployeeService implements EmployeeService {
     @Override
     public Optional<String> changePrice(String traySymbol, Long updatedPrice) {
         Optional<VendingMachine> loadedMachine = machineRepository.load();
-        if (!loadedMachine.isPresent()) {
+        if (loadedMachine.isPresent()) {
             VendingMachine vendingMachine = loadedMachine.get();
             boolean succesfull = vendingMachine.updatePriceForSymbol(traySymbol, updatedPrice);
             machineRepository.save(vendingMachine);

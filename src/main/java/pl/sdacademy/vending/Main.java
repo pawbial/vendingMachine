@@ -102,6 +102,7 @@ public class Main {
                     break;
 
                 case EXIT:
+                    System.out.println("Going back to user menu");
                   return;
 
 
