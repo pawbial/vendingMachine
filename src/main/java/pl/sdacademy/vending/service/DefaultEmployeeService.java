@@ -57,29 +57,23 @@ public class DefaultEmployeeService implements EmployeeService {
 
     @Override
     public Optional<String> addProduct(String traySymbol, String productName, Integer quantity) {
-        Optional<VendingMachine> load = machineRepository.load();
-        int fail = 0;
-        int success = 0;
-        if (!load.isPresent()) {
-           return Optional.of("There is no vending machine, please create new one");
+        Optional<VendingMachine> loadedMachine = machineRepository.load();
+        if (!loadedMachine.isPresent()) {
+            return Optional.of(
+                    "There is no vending machine, add one by creating tray");
         }
-        if (load.isPresent()) {
-            VendingMachine vendingMachine = load.get();
-            for (int i = 0; i < quantity; i++) {
-                boolean addedProductCount = vendingMachine.addProductToTray(traySymbol, new Product(productName));
-                if (addedProductCount) {
-                    success ++;
-                } else if (!addedProductCount) {
-                    fail++;
-                }
-            machineRepository.save(vendingMachine);
-                if (fail == 0) {
-                    return Optional.empty();
-                }
-                return Optional.of(success + " products added correctly, and " + fail + " not");
+        VendingMachine machine = loadedMachine.get();
+        for (int addedProductCount = 0; addedProductCount < quantity; addedProductCount++) {
+            Product product = new Product(productName);
+            if (!machine.addProductToTray(traySymbol, product)) {
+                machineRepository.save(machine);
+                return Optional.of(
+                        "Could not add "
+                                + (quantity - addedProductCount)
+                                + " products");
             }
-            machineRepository.save(vendingMachine);
         }
+        machineRepository.save(machine);
         return Optional.empty();
     }
 }

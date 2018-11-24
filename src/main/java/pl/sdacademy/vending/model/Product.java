@@ -8,10 +8,12 @@ public class Product implements Serializable {
     public static final long serialVersionUID = 1L;
 
     public String getName() {
+
         return name;
     }
 
     public Product(String name) {
+
         this.name = name;
     }
 

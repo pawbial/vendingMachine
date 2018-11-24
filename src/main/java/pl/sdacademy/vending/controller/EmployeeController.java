@@ -67,7 +67,7 @@ public class EmployeeController {
         String productName = productNameFromUser();
         Integer productQuantity = productQuantityFromUser();
         Optional<String> errorMessage = Optional.of(employeeService.addProduct(traySymbol, productName, productQuantity)
-                .orElse("All products have been added");
+                .orElse("All products have been added"));
     }
 
     private Integer productQuantityFromUser() {
