@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc8ed372-766d-44bb-921a-61e6262ef881" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/controller/EmployeeOperationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/controller/EmployeeOperationsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/controller/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/controller/service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/service/DefaultEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/service/DefaultEmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Tray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Tray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/VendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/VendingMachine.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -139,7 +138,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="85" />
+          <entry key="java" value="89" />
           <entry key="md" value="3" />
           <entry key="properties" value="4" />
           <entry key="xml" value="2" />
@@ -147,7 +146,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="85" />
+          <entry key="JAVA" value="89" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="4" />
@@ -156,15 +155,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="159" />
-          <entry key="java" value="9936" />
+          <entry key="dummy" value="166" />
+          <entry key="java" value="10963" />
           <entry key="properties" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9936" />
-          <entry key="PLAIN_TEXT" value="159" />
+          <entry key="JAVA" value="10963" />
+          <entry key="PLAIN_TEXT" value="166" />
           <entry key="Properties" value="27" />
         </counts>
       </usages-collector>
@@ -178,46 +177,74 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Tray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="162">
+              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1219#1220#0" expanded="true" />
                 <element signature="e#1244#1245#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/controller/EmployeeOperationsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/controller/service/EmployeeService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1296#1297#0" expanded="true" />
+                <element signature="e#1329#1330#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/service/DefaultEmployeeService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/VendingMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="-111">
+              <caret line="224" column="13" lean-forward="true" selection-start-line="224" selection-start-column="13" selection-end-line="224" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/VendingMachineSnapshot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+              <folding>
+                <element signature="e#279#280#0" expanded="true" />
+                <element signature="e#320#321#0" expanded="true" />
+                <element signature="e#384#385#0" expanded="true" />
+                <element signature="e#425#426#0" expanded="true" />
+                <element signature="e#660#661#0" expanded="true" />
+                <element signature="e#687#688#0" expanded="true" />
+                <element signature="e#715#716#0" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
+                <element signature="e#524#525#0" expanded="true" />
+                <element signature="e#582#583#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/TraySnapshot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="e#365#366#0" expanded="true" />
+                <element signature="e#394#395#0" expanded="true" />
+                <element signature="e#424#425#0" expanded="true" />
+                <element signature="e#452#453#0" expanded="true" />
+                <element signature="e#486#487#0" expanded="true" />
+                <element signature="e#516#517#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/controller/CustomerOperationsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-323">
+              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -268,8 +295,6 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Product.java" />
         <option value="$PROJECT_DIR$/vendingMachine/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/controller/EmployeeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/VendingMachine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Tray.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/controller/service/CustomerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/service/DefaultCustomerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/controller/CustomerOperationsController.java" />
@@ -277,6 +302,10 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/controller/service/EmployeeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/controller/EmployeeOperationsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/service/DefaultEmployeeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/TraySnapshot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Tray.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/VendingMachineSnapshot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/VendingMachine.java" />
       </list>
     </option>
   </component>
@@ -384,53 +413,7 @@
               <item name="pl" type="462c0819:PsiDirectoryNode" />
               <item name="sdacademy" type="462c0819:PsiDirectoryNode" />
               <item name="vending" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vendingMachine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vendingMachine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pl" type="462c0819:PsiDirectoryNode" />
-              <item name="sdacademy" type="462c0819:PsiDirectoryNode" />
-              <item name="vending" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vendingMachine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vendingMachine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pl" type="462c0819:PsiDirectoryNode" />
-              <item name="sdacademy" type="462c0819:PsiDirectoryNode" />
-              <item name="vending" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vendingMachine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vendingMachine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pl" type="462c0819:PsiDirectoryNode" />
-              <item name="sdacademy" type="462c0819:PsiDirectoryNode" />
-              <item name="vending" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vendingMachine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vendingMachine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pl" type="462c0819:PsiDirectoryNode" />
-              <item name="sdacademy" type="462c0819:PsiDirectoryNode" />
-              <item name="vending" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vendingMachine" type="b2602c69:ProjectViewProjectNode" />
@@ -458,7 +441,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543053929930" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543055702008" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
@@ -640,7 +623,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.2987897" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.2987897" />
       <window_info id="Structure" order="1" sideWeight="0.502439" side_tool="true" weight="0.36384267" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -648,14 +631,14 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.502439" side_tool="true" weight="0.36384267" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4924357" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4795764" visible="true" weight="0.45662847" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" sideWeight="0.49167928" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4795764" weight="0.45662847" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49848714" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49848714" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4977307" weight="0.3289689" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5204236" side_tool="true" visible="true" weight="0.45662847" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50832075" side_tool="true" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49167928" weight="0.3289689" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49319214" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -884,38 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/VendingMachine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="208" lean-forward="true" selection-start-line="208" selection-end-line="208" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Tray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1219#1220#0" expanded="true" />
-            <element signature="e#1244#1245#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/controller/CustomerOperationsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/service/DefaultCustomerService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -948,8 +899,76 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/service/DefaultEmployeeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
+        <state relative-caret-position="-469">
           <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/controller/CustomerOperationsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-323">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/Tray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1219#1220#0" expanded="true" />
+            <element signature="e#1244#1245#0" expanded="true" />
+            <element signature="e#1296#1297#0" expanded="true" />
+            <element signature="e#1329#1330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/TraySnapshot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/VendingMachineSnapshot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <folding>
+            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#687#688#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#582#583#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdacademy/vending/model/VendingMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-111">
+          <caret line="224" column="13" lean-forward="true" selection-start-line="224" selection-start-column="13" selection-end-line="224" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

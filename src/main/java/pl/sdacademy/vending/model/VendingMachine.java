@@ -1,13 +1,10 @@
 package pl.sdacademy.vending.model;
 
-import pl.sdacademy.vending.controller.CustomerOperationsController;
 import pl.sdacademy.vending.util.Configuration;
-import pl.sdacademy.vending.util.StringUtil;
 
 import java.io.Serializable;
 import java.util.Optional;
 import java.util.Random;
-import java.util.Scanner;
 
 public class VendingMachine implements Serializable {
 
@@ -86,9 +83,9 @@ public class VendingMachine implements Serializable {
         if (symbol.length() != 2) {
             return false;
         }
-        if (rowNo < 0 || rowNo>= rowsCount || colNo < 0 || colNo >= colsCount) {
+        if (rowNo < 0 || rowNo >= rowsCount || colNo < 0 || colNo >= colsCount) {
             return false;
-        } else if (trays[rowNo][colNo] == null){
+        } else if (trays[rowNo][colNo] == null) {
             trays[rowNo][colNo] = tray;
             return true;
         } else {
@@ -97,7 +94,7 @@ public class VendingMachine implements Serializable {
 
     }
 
-    public Optional <Tray> removeTrayWithSymbol (String traySymbol) {
+    public Optional<Tray> removeTrayWithSymbol(String traySymbol) {
 
         if (traySymbol.length() != 2) {
             return Optional.empty();
@@ -105,7 +102,7 @@ public class VendingMachine implements Serializable {
         int rowNo = traySymbol.charAt(0) - 'A';
         int colNo = traySymbol.charAt(1) - '1';
 
-        Optional <Tray> tray = getTrayAtPosition(rowNo,colNo);
+        Optional<Tray> tray = getTrayAtPosition(rowNo, colNo);
 
         if (tray.isPresent()) {
             trays[rowNo][colNo] = null;
@@ -145,11 +142,11 @@ public class VendingMachine implements Serializable {
         }
     }
 
-    public boolean addProductToTray (String traySymbol, Product product) {
+    public boolean addProductToTray(String traySymbol, Product product) {
         Optional<Tray> currentTray = getTrayForSymbol(traySymbol);
 //        Jako Stream
 //        currentTray.map(tray -> tray.addProduct(product)).orElse(false);
-        if (currentTray.isPresent()){
+        if (currentTray.isPresent()) {
             currentTray.get().addProduct(product);
             return true;
         } else {
@@ -197,11 +194,11 @@ public class VendingMachine implements Serializable {
         }
     }
 
-    public boolean updatePriceForSymbol (String symbol, Long price) {
+    public boolean updatePriceForSymbol(String symbol, Long price) {
 
         Optional<Tray> trayToChange = getTrayForSymbol(symbol);
 
-        if (trayToChange.isPresent()){
+        if (trayToChange.isPresent()) {
             Tray tray = trayToChange.get();
             tray.updatePrice(price);
             return true;
@@ -210,14 +207,35 @@ public class VendingMachine implements Serializable {
         return false;
     }
 
-    private Optional <Tray> getTrayForSymbol (String traySymbol) {
+    public VendingMachineSnapshot snapshot() {
+        //pobrać buildera shapszotu
+        // przejść po wszystkich tackach w automacie
+        //wywołać na nich operację snapszot
+        //zapisz snapshot tacki w builderze
+        //zwróć obiekt
+
+        VendingMachineSnapshot.Builder snapBuilder = VendingMachineSnapshot.build((int)rowsCount, (int)colsCount);
+        for (int row = 0; row < rowsCount; row++) {
+            for (int col = 0; col < colsCount; col++) {
+                Tray tray = trays[row][col];
+                if (tray != null) {
+                    snapBuilder.tray(row, col,tray.snapshot());
+                }
+
+            }
+
+        }
+        return snapBuilder.build();
+    }
+
+    private Optional<Tray> getTrayForSymbol(String traySymbol) {
         if (traySymbol.length() != 2) {
             return Optional.empty();
         }
         int rowNo = traySymbol.charAt(0) - 'A';
         int colNo = traySymbol.charAt(1) - '1';
 
-       return getTrayAtPosition(rowNo,colNo);
+        return getTrayAtPosition(rowNo, colNo);
     }
 
 
